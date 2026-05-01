@@ -34,7 +34,7 @@
 		x_i &- \text{$i$-ta obserwacja.}
 	\end{aligned}
 	\]
-	Ta średnia to średni wynik w grupie. Jeśli $\bar{x}$ dla grupy po kursie będzie większa niż dla grupy bez kursu, to kurs będzie podnosił ogólny poziom wiedzy studenta. \\ \\
+	Ta średnia to średni wynik w grupie. Jeśli $\bar{x}$ dla grupy po kursie będzie większa niż dla grupy bez kursu, to kurs będzie podnosił ogólny poziom wiedzy studenta. \\
 	
 	\textbf{Mediana}. Wzór:
 	\[x_{med}=
@@ -232,20 +232,30 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{po_kursie_math.png} 
-	\includegraphics[width=0.4\textwidth]{bez_kursu_math.png} 
+	\includegraphics[width=0.4\textwidth]{bez_kursu_math.png}
+	\caption{Histogramy ukazujące liczbę osób oraz punktacje jaką uzyskały z testu końcowego dla grupy po kursie przygotowawczym (po lewej) oraz bez (po prawej).}
 \end{figure}
+
+	Na wykresie widac, że szczyt drugiego wykresu jest lekko przesunięty w prawą stronę w porównaniu z niebieskim wykresem. Potwierdza to nasze obliczenia oraz wnioski dotyczące średnich. Fakt, że średnie ucinana i winsorowska są podobne do arytmetycznej, mówi nam, że sukces jest realny dla większości, nie tylko dla kilku osób. Wychodzącą ze wzorów powyżej ujemną skośność potwierdza wykres po prawej stronie, posiadający lewostronny ogon. Kształt rozkładu, opisany przez kurtozę oraz skośność, pokazuje, że wyniki po kursie częściej kumulują się w górnych granicach przedziałów, co widać po 'pogrubionym' prawym boku wykresu.
+
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{z_z_norm.png} 
-	\includegraphics[width=0.4\textwidth]{bez_z_norm.png} 
+	\includegraphics[width=0.4\textwidth]{bez_z_norm.png}
+	\caption{Histogram (opisany powyżej) z nałożoną gęstością rozkladu normalnego (czerwona linia).}
 \end{figure}
+
+	Jak widać na powyższych histogramach, mają one podobne rozkłady, bardzo zbliżone do rozkładu normalnego. Jednak wykres po prawej stronie jest przesunięty w prawo. Linia rozkładu normlanego idelanie obrazuje nam to przesunięcie.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\textwidth]{boxploty.png} 
+	\includegraphics[width=0.6\textwidth]{boxploty.png} 
+	\caption{Wykresy pudełkowe z zaznaczonymi wartościami odstającymi oraz średnimi}
 \end{figure}
 
+	Prezentowany wykres pudełkowy pokazuje różnice między dwoma badanymi grupami. Na pierwszy rzut oka widać, że kurs przygotowawczy podniósł wyniki z testu. Najbardziej dostrzegalne są linie średnich wyników. Niebieska linia jest zdecydowanie wyżej niż linia czerowona, co potwierdza nasze obliczenia. Niebieski boxplot jest  wyraźnie krótszy niż różowy, co znajduje bezpośrednie potwierdzenie w wartościach wariancji oraz IQR. W grupie bez kursu wyniki są rozproszone, panuje tu duża niepewność i wysoki współczynnik zmienności. W grupie bez kursu obserwujemy długi dolny wąs oraz liczne wartości odstające, co wizualnie odpowiada ujemnej skośności rozkładu. Pokazuje to, że bez przygotowania ryzyko uzyskania bardzo niskiego wyniku jest wysokie. Kurs przygotowawczy minimalne wartości zostały drastycznie podciągnięte w górę. Dzięki temu nawet najsłabsi uczniowie w grupie po kursie osiągają wyniki zbliżone do średniej grupy nieprzygotowanej. Nie obserwujemy też dużo wartości odstających. 
+	
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{srednie_od_k_comp.png} 
@@ -255,4 +265,5 @@
 	Na podstawie wykresów wyciągnięto wnioski. Średnia arytmetyczna jest wyższa od mediany w obu przypadkach, co mówi o dużej ilości wysokich wyników (rozkład prawostronnie skośny). Różnica między nimi w przypadku lewego wykresu wynosi 0.695530, co wskazuje na lekką asymetrię, natomiast prawego  0.077881, co jest mniejszą różnicą i sugeruje bardziej symetryczny rozkład. Pomarańczowa linia na lewym wykresie początkowo rośnie wraz z $k$, co sugeruje, że pierwsze usuwane obserwacje to pojedyńcze niskie wartości, które zaniżały obraz grupy po kursie. Na prawym wykresie ten początkowy wzrost jest bardziej stromy, co może oznaczać więcej "niepowodzeń" (bardzo niskich wyników) w grupie bez przygotowania.
 
 \section{Wnioski}
+
 \end{document}

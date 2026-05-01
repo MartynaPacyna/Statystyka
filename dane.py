@@ -11,28 +11,42 @@ df = pd.read_csv(file_path)
 po_kursie = df[df['test preparation course'] == 'completed']['math score']
 bez_kursu = df[df['test preparation course'] == 'none']['math score']
 
-x = np.linspace(0, 100, 100)
-mu_po, std_po = stats.norm.fit(po_kursie)
-plt.plot(x, stats.norm.pdf(x, mu_po, std_po), color='darkred', lw=2)
 
 plt.xlim(0,100)
-plt.hist(po_kursie, bins=25, label='Po kursie', color='pink', density=True)
+plt.hist(po_kursie, bins=25, label='Po kursie', color='#66b3ff', density=True)
 plt.title('Wyniki uczniów po kursu przygotowawczego')
 plt.legend()
 plt.show()
 
-mu_bez, std_bez = stats.norm.fit(bez_kursu)
-plt.plot(x, stats.norm.pdf(x, mu_bez, std_bez), color='darkred', lw=2)
 plt.xlim(0,100)
-plt.hist(bez_kursu, bins=25, label='Bez kursu', color='pink', density=True)
+plt.hist(bez_kursu, bins=25, label='Bez kursu', color='#ff9999', density=True)
 plt.title('Wyniki uczniów bez kursu przygotowawczego')
 plt.legend()
 plt.show()
 
-plt.boxplot([bez_kursu, po_kursie], labels=['Bez kursu', 'Po kursie'], showmeans=True, notch=True)
+plt.figure(figsize=(8, 6))
+bp = plt.boxplot([po_kursie, bez_kursu], 
+                  labels=['Po kursie', 'Bez kursu'], 
+                  showmeans=True, 
+                  meanline=True, 
+                  notch=True, 
+                  patch_artist=True)
+
+colors = ['#66b3ff', '#ff9999'] 
+for patch, color in zip(bp['boxes'], colors):
+    patch.set_facecolor(color)
+    patch.set_alpha(0.6)
+
+
+mean_po = po_kursie.mean()
+mean_bez = bez_kursu.mean()
+
+plt.axhline(mean_po, color='blue', linestyle=':', alpha=0.5, label=f'Średnia po kursie: {mean_po:.1f}')
+plt.axhline(mean_bez, color='red', linestyle=':', alpha=0.5, label=f'Średnia bez kursu: {mean_bez:.1f}')
 
 plt.title('Porównanie rozkładu wyników')
 plt.ylabel('Wynik testu')
+plt.legend()
 plt.show()
 
 print("Statystyki dla grupy PO KURSIE:")
