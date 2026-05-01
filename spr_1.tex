@@ -192,8 +192,9 @@
 	
 %miary koncentracji
 	\textbf{Kurtoza.} Wzór:
-	NIE WIEM CO Z TYM DROGIM SZALONYM WZOREM NA K
-	\[
+	\[	K=
+	\frac{n-1}{(n-2)(n-3)}
+	\left[(n+1)K_1-3(n-1)\right]+3\]\[	
 	K_1 =
 	\frac{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^4}
 	{\left(\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2\right)^2}
@@ -202,9 +203,31 @@
 	\begin{aligned}
 	\bar{x} &- \text{średnia arytmetyczna próby,}\\
 	n &- \text{liczebność próby,} \\
-	x_i &- \text{i-ta obserwacja w zbiorze danych,} 
+	x_i &- \text{$i$-ta obserwacja w zbiorze danych,} 
 	\end{aligned}
 	\]
+	Kurtoza to miara koncentracji uzyskanych wyników. Mówi czy i w jakim stopniu dane są skoncentrowane wokół średniej. Dla rozkładu normalnego kurtoza przyjmuje wartość 3, co stanowi punkt odniesienia przy interpretacji wyników.\\
+	Wyznaczono kurtozę dla obu analizowanych grup:\\
+	Grupa po kursie przygotowawczym:\\
+	\[	
+	K_1 =
+	\frac{\frac{1}{358}\sum_{i=1}^{358}(x_i- 69.695530)^4}
+	{\left(\frac{1}{358}\sum_{i=1}^{358}(x_i- 69.695530)^2\right)^2}=2.821198
+	\]
+	\[	K=
+	\frac{358-1}{(358-2)(358-3)}
+	\left[(358+1)K_1-3(358-1)\right]+3=2.835624\]
+	Grupa bez kursu przygotowawczego:\\
+	\[	
+	K_1 =
+	\frac{\frac{1}{642}\sum_{i=1}^{642}(x_i- 64.077881)^4}
+	{\left(\frac{1}{642}\sum_{i=1}^{642}(x_i- 64.077881)^2\right)^2}=3.388875
+	\]
+	\[	K=
+	\frac{642-1}{(642-2)(642-3)}
+	\left[(642+1)K_1-3(642-1)\right]+3=3.401325\]
+	Drobna różnica w wartościach kurtozy dla obu grup wskazuje na nieznacznie odmienny kształt rozkładów, jednak w obu przypadkach wartości pozostają w pobliżu poziomu charakterystycznego dla rozkładu normalnego. Wartość kurtozy o drobinę niższa od 3 dla grupy po kursie wskazuje, że rozkład wyników jest nieco bardziej spłaszczony niż rozkład normalny. Oznacza to mniejszą koncentrację wyników wokół średniej oraz mniejszą obecność wartości odstających. Wartość o drobinę wyższa od 3 dla grupy bez kursu oznacza, że rozkład jest bardziej skupiony wokół średniej, jednocześnie częściej pojawiają się wartości skrajne. 
+	
 \section{Prezentacja rozkładów na wykresach}
 \begin{figure}[H]
 	\centering
