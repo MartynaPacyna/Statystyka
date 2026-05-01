@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.28)  1 MAY 2026 13:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.28)  1 MAY 2026 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,56 +693,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--86
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 94--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--130
 
  []
 
 
 
-[2]
-
 [3]
 <po_kursie_math.png, id=28, 462.528pt x 346.896pt>
 File: po_kursie_math.png Graphic file (type png)
 <use po_kursie_math.png>
-Package pdftex.def Info: po_kursie_math.png  used on input line 177.
+Package pdftex.def Info: po_kursie_math.png  used on input line 211.
 (pdftex.def)             Requested size: 193.47578pt x 145.10777pt.
 <bez_kursu_math.png, id=30, 462.528pt x 346.896pt>
 File: bez_kursu_math.png Graphic file (type png)
 <use bez_kursu_math.png>
-Package pdftex.def Info: bez_kursu_math.png  used on input line 178.
+Package pdftex.def Info: bez_kursu_math.png  used on input line 212.
 (pdftex.def)             Requested size: 193.47578pt x 145.10777pt.
-<z_z_norm.png, id=31, 462.528pt x 346.896pt>
+
+
+[4]
+<z_z_norm.png, id=34, 462.528pt x 346.896pt>
 File: z_z_norm.png Graphic file (type png)
 <use z_z_norm.png>
-Package pdftex.def Info: z_z_norm.png  used on input line 183.
+Package pdftex.def Info: z_z_norm.png  used on input line 217.
 (pdftex.def)             Requested size: 193.47578pt x 145.10777pt.
-<bez_z_norm.png, id=32, 462.528pt x 346.896pt>
+<bez_z_norm.png, id=35, 462.528pt x 346.896pt>
 File: bez_z_norm.png Graphic file (type png)
 <use bez_z_norm.png>
-Package pdftex.def Info: bez_z_norm.png  used on input line 184.
+Package pdftex.def Info: bez_z_norm.png  used on input line 218.
 (pdftex.def)             Requested size: 193.47578pt x 145.10777pt.
-<boxploty.png, id=33, 462.528pt x 346.896pt>
+<boxploty.png, id=36, 462.528pt x 346.896pt>
 File: boxploty.png Graphic file (type png)
 <use boxploty.png>
-Package pdftex.def Info: boxploty.png  used on input line 189.
+Package pdftex.def Info: boxploty.png  used on input line 223.
 (pdftex.def)             Requested size: 193.47578pt x 145.10777pt.
-<srednie_od_k_comp.png, id=34, 457.20813pt x 356.33125pt>
+<srednie_od_k_comp.png, id=37, 457.20813pt x 356.33125pt>
 File: srednie_od_k_comp.png Graphic file (type png)
 <use srednie_od_k_comp.png>
-Package pdftex.def Info: srednie_od_k_comp.png  used on input line 194.
+Package pdftex.def Info: srednie_od_k_comp.png  used on input line 228.
 (pdftex.def)             Requested size: 193.47578pt x 150.78903pt.
-<srednia_od_k_none.png, id=35, 461.22313pt x 359.3425pt>
+<srednia_od_k_none.png, id=38, 461.22313pt x 359.3425pt>
 File: srednia_od_k_none.png Graphic file (type png)
 <use srednia_od_k_none.png>
-Package pdftex.def Info: srednia_od_k_none.png  used on input line 195.
+Package pdftex.def Info: srednia_od_k_none.png  used on input line 229.
 (pdftex.def)             Requested size: 193.47578pt x 150.73639pt.
 
 
-[4 <./po_kursie_math.png> <./bez_kursu_math.png> <./z_z_norm.png> <./bez_z_norm
-.png> <./boxploty.png>]
+[5 <./po_kursie_math.png> <./bez_kursu_math.png> <./z_z_norm.png> <./bez_z_norm
+.png> <./boxploty.png> <./srednie_od_k_comp.png> <./srednia_od_k_none.png>]
 
-[5 <./srednie_od_k_comp.png> <./srednia_od_k_none.png>] (./spr_1.aux)
+[6] (./spr_1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -751,11 +774,11 @@ L3 programming layer <2025-01-18>
 Here is how much of TeX's memory you used:
  5787 strings out of 473189
  93168 string characters out of 5719958
- 496666 words of memory out of 5000000
+ 498666 words of memory out of 5000000
  28990 multiletter control sequences out of 15000+600000
  569403 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,65p,802b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,12n,65p,772b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dis
@@ -771,10 +794,10 @@ fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2025/texmf-dist/fonts/type
 m-super/sfrm1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sf
 rm1440.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb
 >
-Output written on spr_1.pdf (5 pages, 456361 bytes).
+Output written on spr_1.pdf (6 pages, 457602 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

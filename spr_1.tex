@@ -82,10 +82,36 @@
 	\[\bar{x}_{\text{w}} =\frac{1}{358}\left[(36+1) x_{(36+1)}+ \sum_{i=36+2}^{358-36-1} x_i+ (36+1) x_{(358-36)}\right]=69.782122\]
 	Grupa bez kursu przygotowawczego, $k=64$:\\
 	\[\bar{x}_{\text{w}} =\frac{1}{642}\left[(64+1) x_{(64+1)}+ \sum_{i=64+2}^{642-64-1} x_i+ (64+1) x_{(642-64)}\right]=64.350467\]
-	Średnia winsorowska w obu grupach jest bardzo zbliżona do średniej arytmetycznej i ucinanej, co potwierdza brak znaczących wartości odstających. Jednocześnie nadal widać różnicę między grupami, co wskazuje, że uczniowie po kursie osiągają wyższe wyniki niezależnie od sposobu liczenia średniej.\\ \\
+	Średnia winsorowska w obu grupach jest bardzo zbliżona do średniej arytmetycznej i ucinanej, co potwierdza brak znaczących wartości odstających. Jednocześnie nadal widać różnicę między grupami, co wskazuje, że uczniowie po kursie osiągają nieco wyższe wyniki niezależnie od sposobu liczenia średniej.\\ \\
 	
-	\textbf{Kwartyle}. \\ \\
-	robie<3
+	\textbf{Kwartyle}. 
+	\[
+	\begin{aligned}
+		Q2 &- \text{mediana},\\
+		Q1 &- \text{mediana grupy obserwacji mniejszych od $Q2$},\\
+		Q3 &- \text{mediana grupy obserwacji większych od $Q2$.}
+	\end{aligned}
+	\]
+	Kwartyle dzielą zbiór na 4 grupy. Kwartyl pierwszy $(Q1)$ mówi o tym, że $25\%$ danych ma wartości mniejsze lub równe $Q1$. Analogicznie kwartyl trzeci $(Q3)$ pokazuje od jakiej wartości $75\%$ danych jest mniejsze lub równe.\\
+	Wyznaczono $Q1, Q2, Q3$ dla obu analizowanych grup:\\
+	Grupa po kursie przygotowawczym:\\
+	\[
+	Q1= 60,
+	\]\[
+	Q2= 69,
+	\]\[
+	Q3= 79.
+	\]
+	Grupa bez kursu przygotowawczego:\\
+	\[
+	Q1= 54,
+	\]\[
+	Q2= 64,
+	\]\[
+	Q3= 75.
+	\]
+	Wszystkie obliczone kwartyle są nieco wyższe dla wyników uczniów po kursie przygotowawczym, co wskazuje na ogólną poprawę wyników na całym rozkładzie, a nie tylko w jego wybranych fragmentach. Sugeruje to pozytywny wpływ kursu na przygotowanie do egzaminu bez względu na uzyskany wynik. \\
+
 	
 %miary rozproszenia
 	\textbf{IQR (rozstęp międzykwartylowy).} Wzór:
@@ -96,6 +122,14 @@
 		Q3 &- \text{trzeci kwartyl}.\\
 	\end{aligned}
 	\]
+	Rozstęp międzykwartylowy opisuje zróżnicowanie środkowych $50\%$ danych oraz pozwala ocenić jak bardzo są skoncentrowane wokół mediany. Na jego podstawie można wnioskować o stopniu rozproszenia typowych wartości w zbiorze danych.\\
+	Obliczono $IQR$ dla obu analizowanych grup:\\
+	Grupa po kursie przygotowawczym:\\
+	\[IQR=Q3-Q1=79-60=19\]
+	Grupa bez kursu przygotowawczego:\\
+	\[IQR=Q3-Q1=75-54=21\]
+	Wyniki uczniów po kursie przygotowawczym mają nieznacznie mniejszą wartość $IQR$, co oznacza, że zróżnicowanie $50\%$ środkowych wyników jest bardzo podobne. Uczniowie w obu grupach osiągają podobnie rozproszone wyniki w zakresie typowych wartości.
+	
 	
 	
 	\textbf{Wariancja z próby.} Wzór:
