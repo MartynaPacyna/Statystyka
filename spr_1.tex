@@ -22,7 +22,7 @@
 
 
 \section{Wstęp}
-	Analizowany zbiór danych pochodzi z platformy Kaggle i dotyczy wyników egzaminacyjnych uczniów szkół średnich z trzech głównych przedmiotów: matematyki (math score), czytania (reading score) oraz pisania (writing score). Zbiór składa się z 1000 obserwacji, z których każda opisuje pojedynczego ucznia za pomocą 8 cech. Jest to zestaw danych stworzony głównie w celach edukacyjnych. Głównym celem niniejszego sprawozdania jest przeprowadzenie analizy porównawczej wyników egzaminacyjnych z matematyki w dwóch grupach uczniów: tych, którzy odbyli kurs przygotowawczy (358 uczniów), oraz tych, którzy go nie posiadali (642 uczniów). 
+	Analizowany zbiór danych pochodzi z platformy Kaggle i dotyczy wyników egzaminacyjnych uczniów szkół średnich z trzech głównych przedmiotów: matematyki (math score), czytania (reading score) oraz pisania (writing score). Zbiór składa się z 1000 obserwacji, z których każda opisuje pojedynczego ucznia za pomocą 8 cech. Jest to zestaw danych stworzony głównie w celach edukacyjnych. Głównym celem niniejszego sprawozdania jest przeprowadzenie analizy porównawczej rozkładów wyników egzaminacyjnych z matematyki w dwóch grupach uczniów: tych, którzy odbyli kurs przygotowawczy (358 uczniów), oraz tych, którzy tego nie zrobili (642 uczniów). 
 	
 \section{Analiza rozkładów przy pomocy metryk statystycznych}
 %miary położenia
@@ -31,20 +31,19 @@
 	\[
 	\begin{aligned}
 		n &- \text{liczebność próby},\\
-		x_i &- \text{$i$-ta obserwacja.}
+		x_i &- \text{$i$-ta obserwacja w zbiorze danych.}
 	\end{aligned}
 	\]
-	Ta średnia to średni wynik w grupie. Jeśli $\bar{x}$ dla grupy po kursie będzie większa niż dla grupy bez kursu, to kurs będzie podnosił ogólny poziom wiedzy studenta. \\
-	Obliczono średnie arytmetyczne dla obu analizowanych grup:\\
+	Ta średnia to średni wynik w grupie. Jeśli $\bar{x}$ dla grupy po kursie będzie większa niż dla grupy bez kursu, to może to znaczyć, że kurs podnosi ogólny poziom wiedzy studenta. Obliczono średnią arytmetyczną dla obu analizowanych grup.\\
 	Grupa po kursie przygotowawczym:\\
 	\[
-	\bar{x} = \frac{1}{358} \sum_{i = 1}^{358} x_{i}=69.695530
+	\bar{x} = \frac{1}{358} \sum_{i = 1}^{358} x_{i}=69.695530.
 	\]
 	Grupa bez kursu przygotowawczego:\\
 	\[
-	\bar{x} = \frac{1}{642} \sum_{i = 1}^{642} x_{i}= 64.077881
+	\bar{x} = \frac{1}{642} \sum_{i = 1}^{642} x_{i}= 64.077881.
 	\]
-	Średnia arytmetyczna dla wyników po kursie jest wyższa od średniej dla wyników bez kursu. Warto zaznaczyć, że ta różnica nie jest duża, ale może wskazywać na pozytywną zależność między uczestniczeniem w kursie a osiągniętymi wynikami.
+	Średnia arytmetyczna dla wyników po kursie jest wyższa od średniej dla wyników bez kursu. Różnica ta nie jest duża, ale może wskazywać na pozytywną zależność między uczestnictwem w kursie a osiągniętymi wynikami.
 	\newpage
 	
 	\textbf{Mediana}. Wzór:
@@ -59,15 +58,14 @@
 		x_i &- \text{$i$-ta uporządkowana obserwacja.}
 	\end{aligned}
 	\]
-	Mediana jest wartością środkową w uporządkowanym zbiorze danych, która dzieli go na dwie grupy. Oznacza to, że połowa obserwacji ma mniejsze lub równe wartości od mediany i analogicznie druga połowa ma niemniejsze wartości niż mediana.\\
-	Obliczono medianę dla obu analizowanych grup:\\
+	Mediana jest wartością środkową w uporządkowanym zbiorze danych, która dzieli go na dwie grupy. Oznacza to, że połowa obserwacji ma mniejsze lub równe wartości od mediany i analogicznie druga połowa ma niemniejsze wartości niż mediana. Obliczono medianę dla obu analizowanych grup.\\
 	Grupa po kursie przygotowawczym:\\
 	\[x_{med}=
-	\frac{1}{2}\left(x_{\left(\frac{358}{2}\right)}+x_{\left(\frac{358}{2}+1\right)}\right)=\frac{1}{2}\left(x_{(179)}+x_{(180)}\right)=69
+	\frac{1}{2}\left(x_{\left(\frac{358}{2}\right)}+x_{\left(\frac{358}{2}+1\right)}\right)=\frac{1}{2}\left(x_{(179)}+x_{(180)}\right)=69.
 	\]
 	Grupa bez kursu przygotowawczego:\\
 	\[x_{med}=
-	\frac{1}{2}\left(x_{\left(\frac{642}{2}\right)}+x_{\left(\frac{642}{2}+1\right)}\right)=\frac{1}{2}\left(x_{(321)}+x_{(322)}\right)=64
+	\frac{1}{2}\left(x_{\left(\frac{642}{2}\right)}+x_{\left(\frac{642}{2}+1\right)}\right)=\frac{1}{2}\left(x_{(321)}+x_{(322)}\right)=64.
 	\]
 	Wyższa mediana dla grupy uczestniczących w kursie przygotowawczym sugeruje, że te osoby osiągają wyższe przeciętne wyniki niż w grupie nieuczestniczących w kursie. Różnica median nie jest duża, ale sugeruje pozytywny wpływ na osiągane wyniki. \\
 	
@@ -80,12 +78,11 @@
 		x_i &- \text{$i$-ta uporządkowana obserwacja.}
 	\end{aligned}
 	\]
-	To miara statystyczna, która zmniejsza wpływ wartości skrajnych poprzez pozbycie się ich. Pozwala ocenić, czy dane są jednorodne oraz jak bardzo wyniki odstające wpływają na średnią. Jeśli średnia ucinana niewiele się zmienia przy zwiększaniu $k$, oznacza to, że dane mają niewielkie wahania. W dalszej części pracy pokazano wykresy zależności średniej ucinanej od $k$, które przedstawiają wpływ liczby odrzucanych obserwacji na wynik.  \\ 
-	Obliczono średnie ucinane dla $k\approx 10\% \cdot n$ dla obu grup:\\ 
+	To miara statystyczna, na którą w porównaniu ze średnią arytmetyczną mniej wpływają wartości skrajne. Jeśli średnia ucinana niewiele się zmienia przy zwiększaniu $k$, oznacza to, że dane mają niewielkie wahania. W dalszej części pracy pokazano wykresy zależności średniej ucinanej od $k$, które przedstawiają wpływ liczby odrzucanych obserwacji na wynik. Obliczono średnie ucinane dla $k\approx 10\% \cdot n$ dla obu grup.\\ 
 	Grupa po kursie przygotowawczym, $k=36$:\\
-	\[\bar{x}_{\text{u}} = \frac{1}{358 - 2\cdot 36} \sum_{i=36+1}^{358-36} x_i=\frac{1}{286} \sum_{i=37}^{322} x_i=69.853146\]
+	\[\bar{x}_{\text{u}} = \frac{1}{358 - 2\cdot 36} \sum_{i=36+1}^{358-36} x_i=\frac{1}{286} \sum_{i=37}^{322} x_i=69.853146.\]
 	Grupa bez kursu przygotowawczego, $k=64$:\\
-	\[\bar{x}_{\text{u}} = \frac{1}{642 - 2\cdot 64} \sum_{i=64+1}^{642-64} x_i=\frac{1}{514} \sum_{i=65}^{578} x_i=64.437743\]
+	\[\bar{x}_{\text{u}} = \frac{1}{642 - 2\cdot 64} \sum_{i=64+1}^{642-64} x_i=\frac{1}{514} \sum_{i=65}^{578} x_i=64.437743.\]
 	Obie grupy są dość jednorodne, ponieważ w każdej z nich średnia ucinana jest bardzo zbliżona do średniej arytmetycznej. Oznacza to, że wartości skrajne nie wpływają znacząco na średni wynik z egzaminu, a średnia arytmetyczna dobrze opisuje rozkład wyników w obu grupach.\\ \\
 	
 	
@@ -98,12 +95,11 @@
 		x_i &- \text{$i$-ta uporządkowana obserwacja.}
 	\end{aligned}
 	\]
-	To miara statystyczna, która ogranicza wpływ wartości skrajnych poprzez ich zastąpienie najbliższymi wartościami z pozostałej części danych. Pozwala to ocenić, czy dane są jednorodne oraz jak bardzo wyniki odstające wpływają na średnią. Jeśli średnia winsorowska niewiele się zmienia przy zwiększaniu $k$, oznacza to, że dane mają niewielkie wahania. W dalszej części pracy pokazano wykresy zależności średniej winsorowskiej od $k$, które przedstawiają wpływ liczby modyfikowanych obserwacji na wynik.\\ 
-	Obliczono średnie winsorowskie dla $k\approx 10\% \cdot n$ dla obu grup:\\ 
+	To miara statystyczna, na którą w porównaniu ze średnią arytmetyczną mniej wpływają wartości skrajne. Jeśli średnia winsorowska niewiele się zmienia przy zwiększaniu $k$, oznacza to, że dane mają niewielkie wahania. W dalszej części pracy pokazano wykresy zależności średniej winsorowskiej od $k$, które przedstawiają wpływ liczby modyfikowanych obserwacji na wynik. Obliczono średnie winsorowskie dla $k\approx 10\% \cdot n$ dla obu grup.\\ 
 	Grupa po kursie przygotowawczym, $k=36$:\\
-	\[\bar{x}_{\text{w}} =\frac{1}{358}\left[(36+1) x_{(36+1)}+ \sum_{i=36+2}^{358-36-1} x_i+ (36+1) x_{(358-36)}\right]=69.782122\]
+	\[\bar{x}_{\text{w}} =\frac{1}{358}\left[(36+1) x_{(36+1)}+ \sum_{i=36+2}^{358-36-1} x_i+ (36+1) x_{(358-36)}\right]=69.782122.\]
 	Grupa bez kursu przygotowawczego, $k=64$:\\
-	\[\bar{x}_{\text{w}} =\frac{1}{642}\left[(64+1) x_{(64+1)}+ \sum_{i=64+2}^{642-64-1} x_i+ (64+1) x_{(642-64)}\right]=64.350467\]
+	\[\bar{x}_{\text{w}} =\frac{1}{642}\left[(64+1) x_{(64+1)}+ \sum_{i=64+2}^{642-64-1} x_i+ (64+1) x_{(642-64)}\right]=64.350467.\]
 	Średnia winsorowska w obu grupach jest bardzo zbliżona do średniej arytmetycznej i ucinanej, co potwierdza brak znaczących wartości odstających. Jednocześnie nadal widać różnicę między grupami, co wskazuje, że uczniowie po kursie osiągają nieco wyższe wyniki niezależnie od sposobu liczenia średniej.\\ \\
 	
 	\textbf{Kwartyle}. 
@@ -114,8 +110,7 @@
 		Q3 &- \text{mediana grupy obserwacji większych od $Q2$.}
 	\end{aligned}
 	\]
-	Kwartyle dzielą zbiór na 4 grupy. Kwartyl pierwszy $(Q1)$ mówi o tym, że $25\%$ danych ma wartości mniejsze lub równe $Q1$. Analogicznie kwartyl trzeci $(Q3)$ pokazuje od jakiej wartości $75\%$ danych jest mniejsze lub równe.\\
-	Wyznaczono $Q1, Q2, Q3$ dla obu analizowanych grup:\\
+	Kwartyle dzielą zbiór na 4 grupy. Kwartyl pierwszy $(Q1)$ mówi o tym, że $25\%$ danych ma wartości mniejsze lub równe $Q1$. Analogicznie kwartyl trzeci $(Q3)$ pokazuje od jakiej wartości $75\%$ danych jest mniejsze lub równe. Wyznaczono $Q1, Q2, Q3$ dla obu analizowanych grup.\\
 	Grupa po kursie przygotowawczym:\\
 	\[
 	Q1= 60,
@@ -132,7 +127,7 @@
 	\]\[
 	Q3= 75.
 	\]
-	Wszystkie obliczone kwartyle są nieco wyższe dla wyników uczniów po kursie przygotowawczym, co wskazuje na ogólną poprawę wyników na całym rozkładzie, a nie tylko w jego wybranych fragmentach. Sugeruje to pozytywny wpływ kursu na przygotowanie do egzaminu bez względu na uzyskany wynik. \\
+	Wszystkie obliczone kwartyle są nieco wyższe dla grupy uczniów po kursie przygotowawczym, co wskazuje na lepsze wyniki na całym rozkładzie, a nie tylko w jego wybranych fragmentach. Sugeruje to bardzo subtelną poprawę wyników po ukończeniu kursu. \\
 
 	
 %miary rozproszenia
@@ -144,13 +139,12 @@
 		Q3 &- \text{trzeci kwartyl}.\\
 	\end{aligned}
 	\]
-	Rozstęp międzykwartylowy opisuje zróżnicowanie środkowych $50\%$ danych oraz pozwala ocenić jak bardzo są skoncentrowane wokół mediany. Na jego podstawie można wnioskować o stopniu rozproszenia typowych wartości w zbiorze danych.\\
-	Obliczono $IQR$ dla obu analizowanych grup:\\
+	Rozstęp międzykwartylowy opisuje rozrzut środkowych $50\%$ danych, pozwala ocenić jak bardzo są skoncentrowane wokół mediany. Obliczono $IQR$ dla obu analizowanych grup.\\
 	Grupa po kursie przygotowawczym:\\
-	\[IQR=Q3-Q1=79-60=19\]
+	\[IQR=Q3-Q1=79-60=19.\]
 	Grupa bez kursu przygotowawczego:\\
-	\[IQR=Q3-Q1=75-54=21\]
-	Wyniki uczniów po kursie przygotowawczym mają nieznacznie mniejszą wartość $IQR$, co oznacza, że zróżnicowanie $50\%$ środkowych wyników jest bardzo podobne. Uczniowie w obu grupach osiągają podobnie rozproszone wyniki w zakresie typowych wartości. \\
+	\[IQR=Q3-Q1=75-54=21.\]
+	Wartość $IQR$ dla wyników uczniów po kursie przygotowawczym jest nieznacznie mniejsza niż drugiej grupy, co oznacza, że rozproszenie wyników w zakresie typowych wartości jest bardzo podobne w obu przypadkach. Typowe wyniki są nieco zróżnicowane, ale bez skrajnie dużego rozproszenia \\
 	
 	
 	
@@ -159,16 +153,15 @@
 	\[
 	\begin{aligned}
 		n &- \text{liczebność próby,} \\
-		x_i &- \text{i-ta obserwacja w zbiorze danych,} \\
+		x_i &- \text{$i$-ta obserwacja w zbiorze danych,} \\
 		\bar{x} &- \text{średnia arytmetyczna próby.}
 	\end{aligned}
 	\]
-	Wariancja określa jak bardzo wartości z danego zbioru różnią się od średniej arytmetycznej. Wysoka wariancja oznacza duże zróżnicowanie wyników, natomiast niska ich skupienie wokół średniej.\\
-	Wyznaczono wariancję dla obu analizowanych grup:\\
+	Wariancja określa jak bardzo wartości z danego zbioru różnią się od średniej arytmetycznej. Wysoka wariancja oznacza duże zróżnicowanie wyników, natomiast niska ich skupienie wokół średniej. Wyznaczono wariancję dla obu analizowanych grup.\\
 	Grupa po kursie przygotowawczym:\\
-	\[s^2 = \frac{1}{358-1}\sum_{i=1}^{358}(x_i - 69.695530)^2= \frac{1}{357}\sum_{i=1}^{358}(x_i - 69.695530)^2=208.649335\]
+	\[s^2 = \frac{1}{358-1}\sum_{i=1}^{358}(x_i - 69.695530)^2= \frac{1}{357}\sum_{i=1}^{358}(x_i - 69.695530)^2=208.649335.\]
 	Grupa bez kursu przygotowawczego:\\
-	\[s^2 = \frac{1}{642-1}\sum_{i=1}^{642}(x_i - 64.077881)^2= \frac{1}{641}\sum_{i=1}^{642}(x_i - 64.077881)^2=230.808277\]
+	\[s^2 = \frac{1}{642-1}\sum_{i=1}^{642}(x_i - 64.077881)^2= \frac{1}{641}\sum_{i=1}^{642}(x_i - 64.077881)^2=230.808277.\]
 	Różnica między wariancjami nie jest duża, natomiast możemy zaobserwować nieco niższą wartość dla próbki po kursie przygotowawczym. Sugeruje to mniejsze zróżnicowanie wyników, co za tym idzie, bardziej wyrównany poziom wiedzy studentów niż w grupie, która tego kursu nie wykonała.\\ 
 	
 	\textbf{Odchylenie standardowe.} Wzór:
@@ -176,12 +169,11 @@
 	\[
 	\begin{aligned}
 		n &- \text{liczebność próby,} \\
-		x_i &- \text{i-ta obserwacja w zbiorze danych,} \\
+		x_i &- \text{$i$-ta obserwacja w zbiorze danych,} \\
 		\bar{x} &- \text{średnia arytmetyczna próby.}
 	\end{aligned}
 	\]
-	Odchylenie standardowe, będące pierwiastkiem wariancji, pokazuje typową zmienność danych wokół średniej arytmetycznej.\\
-	Wyznaczono odchylenie standardowe dla obu analizowanych grup:\\
+	Odchylenie standardowe, będące pierwiastkiem wariancji, określa rozrzut danych wokół średniej arytmetycznej. Wyznaczono odchylenie standardowe dla obu analizowanych grup.\\
 	Grupa po kursie przygotowawczym:\\
 	\[
 	s=\sqrt{s^2}=\sqrt{208.649335}=14.444699
@@ -190,7 +182,7 @@
 	\[
 	s=\sqrt{s^2}=\sqrt{230.808277}=15.192375
 	\]
-	Różnica w odchyleniach standardowych jest bardzo niewielka. W grupie po kursie przygotowawczym zaobserwowano nieznacznie niższe odchylenie standardowe, co wskazuje na o drobinę większą przewidywalność i stabilność wyników niż w grupie bez kursu. \\
+	Różnica w odchyleniach standardowych jest bardzo niewielka. W grupie po kursie przygotowawczym zaobserwowano nieznacznie niższe odchylenie standardowe, co wskazuje na o nieco większą przewidywalność i stabilność wyników niż w grupie bez kursu. \\
 	
 
 	\textbf{Odchylenie przeciętne od wartości średniej.} Wzór:
@@ -200,21 +192,21 @@
 	\[
 	\begin{aligned}
 		n &- \text{liczebność próby,} \\
-		x_i &- \text{i-ta obserwacja w zbiorze danych,} \\
+		x_i &- \text{$i$-ta obserwacja w zbiorze danych,} \\
 		\bar{x} &- \text{średnia arytmetyczna próby.}
 	\end{aligned}
 	\]
 	Odchylenie przeciętne od wartości średniej mówi, o ile średnio wartości ze zbioru danych się różnią od średniej arytmetycznej.
-	Obliczono odchylenie przeciętne od wartości średniej dla obu analizowanych grup:\\
+	Obliczono odchylenie przeciętne od wartości średniej dla obu analizowanych grup.\\
 	Grupa po kursie przygotowawczym:\\
 	\[
-	d = \frac{1}{358}\sum_{i=1}^{358} |x_i - 69.695530|=11.584282
+	d = \frac{1}{358}\sum_{i=1}^{358} |x_i - 69.695530|=11.584282.
 	\]
 	Grupa bez kursu przygotowawczego:\\
 	\[
-	d = \frac{1}{642}\sum_{i=1}^{642} |x_i - 64.077881|=12.010073
+	d = \frac{1}{642}\sum_{i=1}^{642} |x_i - 64.077881|=12.010073.
 	\]
-	Nieznacznie wyższa wartość odchylenia dla grupy bez kursu sugeruje, że wyniki odbiegają od średniej arytmetycznej o drobinę bardziej niż dla drugiej grupy. Różnica jest bardzo niewielka, dlatego efekt jest niewyraźny. 
+	Nieznacznie wyższa wartość odchylenia dla grupy bez kursu sugeruje, że wyniki odbiegają od średniej arytmetycznej o drobinę bardziej niż dla drugiej grupy. Różnica jest bardzo niewielka, dlatego efekt jest niewyraźny. \\ 
 	
 %miary asymetrii
 	\textbf{Współczynnik skośności (asymetrii).} Wzór:
@@ -226,19 +218,19 @@
 		s &- \text{odchylenie standardowe z próby,} \\
 		\bar{x} &- \text{średnia arytmetyczna próby,}\\
 		n &- \text{liczebność próby,} \\
-		x_i &- \text{i-ta obserwacja w zbiorze danych,} 
+		x_i &- \text{$i$-ta obserwacja w zbiorze danych.} 
 	\end{aligned}
 	\]
 	Współczynnik skośności opisuje asymetrię rozkładu danych. Pozwala ocenić, czy w rozkładzie występuje przewaga wartości niskich lub wysokich.
-	Obliczono współczynnik skośności dla obu analizowanych grup:\\
+	Obliczono współczynnik skośności dla obu analizowanych grup.\\
 	Grupa po kursie przygotowawczym:\\
 	\[
-	\alpha =\frac{358}{(358-1)(358-2)}\sum_{i=1}^{358} \left(\frac{x_i-\bar{x}}{s}\right)^3=\frac{179}{63546}\sum_{i=1}^{358} \left(\frac{x_i-69.695530}{14.444699}\right)^3=-0.147522
+	\alpha =\frac{358}{(358-1)(358-2)}\sum_{i=1}^{358} \left(\frac{x_i-\bar{x}}{s}\right)^3=\frac{179}{63546}\sum_{i=1}^{358} \left(\frac{x_i-69.695530}{14.444699}\right)^3=-0.147522.
 	\]
 	Grupa bez kursu przygotowawczego:\\
 		\[
 	\alpha =\frac{642}{(642-1)(642-2)}\sum_{i=1}^{642} \left(\frac{x_i-\bar{x}}{s}\right)^3=
-	\frac{321}{205120}\sum_{i=1}^{642} \left(\frac{x_i-64.077881}{15.192375}\right)^3=-0.328723
+	\frac{321}{205120}\sum_{i=1}^{642} \left(\frac{x_i-64.077881}{15.192375}\right)^3=-0.328723.
 	\]
 	Wartości współczynnika skośności dla obu analizowanych grup są ujemne, co oznacza lewostronną skośność. Większość obserwacji znajduje się przy wyższych wartościach. Wartość bezwzględna skośności bliska $0$ dla grupy po kursie przygotowawczym wskazuje na rozkład bliski symetrycznemu. Troszkę większa dla drugiej grupy mówi o większej ilości niskich odstających wyników, ale ten rozkład również nie wykazuje dużej asymetrii. \\
 	
@@ -255,16 +247,15 @@
 	\begin{aligned}
 	\bar{x} &- \text{średnia arytmetyczna próby,}\\
 	n &- \text{liczebność próby,} \\
-	x_i &- \text{$i$-ta obserwacja w zbiorze danych,} 
+	x_i &- \text{$i$-ta obserwacja w zbiorze danych.} 
 	\end{aligned}
 	\]
-	Kurtoza to miara koncentracji uzyskanych wyników. Mówi czy i w jakim stopniu dane są skoncentrowane wokół średniej. Dla rozkładu normalnego kurtoza przyjmuje wartość 3, co stanowi punkt odniesienia przy interpretacji wyników.\\
-	Wyznaczono kurtozę dla obu analizowanych grup:\\
+	Kurtoza to miara koncentracji uzyskanych wyników. Mówi czy i w jakim stopniu dane są skoncentrowane wokół średniej. Dla rozkładu normalnego kurtoza przyjmuje wartość 3, co stanowi punkt odniesienia przy interpretacji wyników. Wyznaczono kurtozę dla obu analizowanych grup.\\
 	Grupa po kursie przygotowawczym:\\
 	\[	
 	K_1 =
 	\frac{\frac{1}{358}\sum_{i=1}^{358}(x_i- 69.695530)^4}
-	{\left(\frac{1}{358}\sum_{i=1}^{358}(x_i- 69.695530)^2\right)^2}=2.821198
+	{\left(\frac{1}{358}\sum_{i=1}^{358}(x_i- 69.695530)^2\right)^2}=2.821198.
 	\]
 	\[	K=
 	\frac{358-1}{(358-2)(358-3)}
@@ -273,12 +264,12 @@
 	\[	
 	K_1 =
 	\frac{\frac{1}{642}\sum_{i=1}^{642}(x_i- 64.077881)^4}
-	{\left(\frac{1}{642}\sum_{i=1}^{642}(x_i- 64.077881)^2\right)^2}=3.388875
+	{\left(\frac{1}{642}\sum_{i=1}^{642}(x_i- 64.077881)^2\right)^2}=3.388875.
 	\]
 	\[	K=
 	\frac{642-1}{(642-2)(642-3)}
 	\left[(642+1)K_1-3(642-1)\right]+3=3.401325\]
-	Drobna różnica w wartościach kurtozy dla obu grup wskazuje na nieznacznie odmienny kształt rozkładów, jednak w obu przypadkach wartości pozostają w pobliżu poziomu charakterystycznego dla rozkładu normalnego. Wartość kurtozy o drobinę niższa od 3 dla grupy po kursie wskazuje, że rozkład wyników jest nieco bardziej spłaszczony niż rozkład normalny. Oznacza to mniejszą koncentrację wyników wokół średniej oraz mniejszą obecność wartości odstających. Wartość o drobinę wyższa od 3 dla grupy bez kursu oznacza, że rozkład jest bardziej skupiony wokół średniej, jednocześnie częściej pojawiają się wartości skrajne. 
+	Drobna różnica w wartościach kurtozy dla obu grup wskazuje na nieznacznie odmienny kształt rozkładów. W obu przypadkach wartości pozostają w pobliżu poziomu charakterystycznego dla rozkładu normalnego. Wartość kurtozy nieco niższa od 3 dla grupy po kursie wskazuje na rzadszą obecność wartości odstających. Wartość nieco wyższa od 3 dla grupy bez kursu sugeruje częstsze pojawianie się wyników skrajnych. 
 	
 \section{Prezentacja rozkładów na wykresach}
 \begin{figure}[H]
@@ -288,14 +279,13 @@
 	\caption{Histogramy ukazujące liczbę osób oraz punktacje jaką uzyskały z testu końcowego dla grupy po kursie przygotowawczym (po lewej) oraz bez (po prawej).}
 \end{figure}
 
-	Na wykresie widac, że szczyt drugiego wykresu jest lekko przesunięty w prawą stronę w porównaniu z niebieskim wykresem. Potwierdza to nasze obliczenia oraz wnioski dotyczące średnich. Fakt, że średnie ucinana i winsorowska są podobne do arytmetycznej, mówi nam, że sukces jest realny dla większości, nie tylko dla kilku osób. Wychodzącą ze wzorów powyżej ujemną skośność potwierdza wykres po prawej stronie, posiadający lewostronny ogon. Kształt rozkładu, opisany przez kurtozę oraz skośność, pokazuje, że wyniki po kursie częściej kumulują się w górnych granicach przedziałów, co widać po 'pogrubionym' prawym boku wykresu.
-
+	Na wykresie widać, że szczyt czerwonego wykresu jest lekko przesunięty w prawą stronę, w porównaniu z niebieskim wykresem. Potwierdza to nasze obliczenia oraz wnioski dotyczące średnich. Wychodzącą ze wzorów powyżej ujemną skośność w obu przypadkach potwierdzają zaprezentowane wykresy posiadające lewostronne ogony. Kształt rozkładu, scharakteryzowany przez kurtozę i skośność, sugeruje większą koncentrację wyników, w obu przypadkach, w wyższych zakresach wartości, co widoczne jest w większym zagęszczeniu danych po prawej stronie wykresu. Wskazano również modę, czyli w tym przypadku słupek najczęstszych wyników. Odczytując z wykresu dla grupy uczniów po kursie przygotowawczym moda wynosi $[67,70)$  natomiast dla uczniów bez kursu $[60,64)$. Dodatkowo, niezależnie od wykresu, wskazano pojedyncze najczęstsze wyniki, odpowiednio dla grupy po kursie $65$ punktów zdobyte przez $16$ osób oraz dla grupy bez kursu $62$ punkty uzyskane przez $28$ uczniów. Zarówno moda punktowa jak i przedziałowa są wyższe dla grupy osób, które odbyły kurs. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{z_z_norm.png} 
 	\includegraphics[width=0.4\textwidth]{bez_z_norm.png}
-	\caption{Histogram (opisany powyżej) z nałożoną gęstością rozkladu normalnego (czerwona linia).}
+	\caption{Histogramy (opisane powyżej) z nałożoną gęstością rozkładu normalnego (czerwona linia).}
 \end{figure}
 
 	Jak widać na powyższych histogramach, mają one podobne rozkłady, bardzo zbliżone do rozkładu normalnego. Jednak wykres po prawej stronie jest przesunięty w prawo. Linia rozkładu normlanego idelanie obrazuje nam to przesunięcie.
@@ -303,10 +293,10 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{boxploty.png} 
-	\caption{Wykresy pudełkowe z zaznaczonymi wartościami odstającymi oraz średnimi}
+	\caption{Wykresy pudełkowe z zaznaczonymi wartościami odstającymi oraz średnimi.}
 \end{figure}
 
-	Prezentowany wykres pudełkowy pokazuje różnice między dwoma badanymi grupami. Na pierwszy rzut oka widać, że kurs przygotowawczy podniósł wyniki z testu. Najbardziej dostrzegalne są linie średnich wyników. Niebieska linia jest zdecydowanie wyżej niż linia czerowona, co potwierdza nasze obliczenia. Niebieski boxplot jest  wyraźnie krótszy niż różowy, co znajduje bezpośrednie potwierdzenie w wartościach wariancji oraz IQR. W grupie bez kursu wyniki są rozproszone, panuje tu duża niepewność i wysoki współczynnik zmienności. W grupie bez kursu obserwujemy długi dolny wąs oraz liczne wartości odstające, co wizualnie odpowiada ujemnej skośności rozkładu. Pokazuje to, że bez przygotowania ryzyko uzyskania bardzo niskiego wyniku jest wysokie. Kurs przygotowawczy minimalne wartości zostały drastycznie podciągnięte w górę. Dzięki temu nawet najsłabsi uczniowie w grupie po kursie osiągają wyniki zbliżone do średniej grupy nieprzygotowanej. Nie obserwujemy też dużo wartości odstających. 
+	Prezentowany wykres pudełkowy pokazuje różnice między dwoma badanymi grupami. Zauważono, że uczestnicy kursu przygotowawczego osiągnęli wyższe wyniki z testu niż druga grupa uczniów. Najbardziej dostrzegalne są linie średnich wyników. Niebieska linia jest zdecydowanie wyżej niż linia czerwona, co potwierdza obliczenia. Niebieski boxplot jest krótszy niż różowy, co znajduje bezpośrednie potwierdzenie w wartościach wariancji oraz $IQR$. W grupie bez kursu wyniki są bardziej rozproszone. Zaobserwowano też długi dolny wąs oraz liczne wartości odstające, co wizualnie odpowiada ujemnej skośności rozkładu. Pokazuje to, że bez kursu przygotowawczego ryzyko uzyskania bardzo niskiego wyniku jest wyższe niż po zrobieniu kursu. Zauważono, że w grupie, która odbyła kurs, występujące minimalne wartości znajdują się wyżej niż odstające niskie wyniki grupy bez kursu. Dzięki temu nawet najsłabsi uczniowie w grupie po kursie osiągają wyniki zbliżone do średniej grupy nieprzygotowanej. Nie obserwujemy też dużo wartości odstających. 
 	
 \begin{figure}[H]
 	\centering
@@ -314,9 +304,9 @@
 	\includegraphics[width=0.4\textwidth]{srednia_od_k_none.png} 
 	\caption{Zależność średnich od parametru $k$ dla dwóch grup: po kursie (po lewej) oraz bez kursu (po prawej).}
 \end{figure}
-	Na podstawie wykresów wyciągnięto wnioski. Średnia arytmetyczna jest wyższa od mediany w obu przypadkach, co mówi o dużej ilości wysokich wyników (rozkład prawostronnie skośny). Różnica między nimi w przypadku lewego wykresu wynosi 0.695530, co wskazuje na lekką asymetrię, natomiast prawego  0.077881, co jest mniejszą różnicą i sugeruje bardziej symetryczny rozkład. Pomarańczowa linia na lewym wykresie początkowo rośnie wraz z $k$, co sugeruje, że pierwsze usuwane obserwacje to pojedyńcze niskie wartości, które zaniżały obraz grupy po kursie. Na prawym wykresie ten początkowy wzrost jest bardziej stromy, co może oznaczać więcej "niepowodzeń" (bardzo niskich wyników) w grupie bez przygotowania.
+	Na podstawie wykresów wyciągnięto wnioski. Średnia ucinana jak i winsorowska na lewym wykresie początkowo rośnie wraz z $k$, co sugeruje, że pierwsze usuwane obserwacje to pojedyncze niskie wartości, które zaniżały obraz grupy po kursie. Na prawym wykresie ten początkowy wzrost jest bardziej stromy, co może oznaczać więcej bardzo niskich wyników w grupie bez kursu przygotowawczego.
 
 \section{Wnioski}
 	
-	Kurs przygotowawczy okazał się efektywny, co potwierdza wzrost wszystkich miar statystycznych, w tym średniej arytmetycznej, ucinanej oraz mediany. Grupa po przygotowaniu stała się bardziej jednorodna, co obrazuje mniejsza wariancja oraz niższy współczynnik zmienności. Kluczowym efektem szkolenia była redukcja wyników skrajnie niskich i eliminacja wartości odstających, które w grupie kontrolnej tworzyły lewy ogon i ujemną skośność. Wykresy pudełkowe potwierdzają statystyczną istotność tych różnic, a kurtoza bliska wartości 3 dowodzi, że oba rozkłady zachowują stabilny charakter zbliżony do normalnego. Rozkłady te wydawały się bardzo zbliżone, jednak po głębszej analizie matematycznej kurs przygotowawczy podnosząc ogólny poziom wiedzy, wyrównując szanse uczniów oraz minimalizując ryzyko egzaminacyjnej porażki.
+	Kurs przygotowawczy okazał się efektywny, co potwierdza wzrost wszystkich miar statystycznych, w tym średniej arytmetycznej, ucinanej oraz mediany. Grupa po przygotowaniu stała się bardziej jednorodna, co obrazuje mniejsza wariancja. Kluczowym efektem szkolenia była redukcja wyników skrajnie niskich i eliminacja wartości odstających, które w grupie kontrolnej tworzyły lewy ogon. Wykresy pudełkowe potwierdzają statystyczną istotność tych różnic, a kurtoza bliska wartości 3 dowodzi, że oba rozkłady zachowują stabilny charakter zbliżony do normalnego. Rozkłady te wydawały się bardzo zbliżone, jednak po głębszej analizie matematycznej kurs przygotowawczy podnosząc ogólny poziom wiedzy obniżył ryzyko egzaminacyjnej porażki.
 \end{document}
