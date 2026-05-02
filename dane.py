@@ -13,28 +13,21 @@ bez_kursu = df[df['test preparation course'] == 'none']['math score']
 
 
 plt.xlim(0,100)
-plt.hist(po_kursie, bins=25, label='Po kursie', color='#66b3ff', density=True)
-
-mu, std = stats.norm.fit(po_kursie)
-x = np.linspace(0, 100, 100)
-plt.plot(x, stats.norm.pdf(x, mu, std), color='darkred', lw=2)
+plt.hist(po_kursie, bins=25, label='Po kursie', color='#66b3ff')
 
 plt.title('Wyniki uczniów po kursie przygotowawczym')
-plt.xlabel('Liczba uczniów')
-plt.ylabel('Wyniki testu')
+plt.ylabel('Liczba uczniów')
+plt.xlabel('Wyniki testu')
 plt.legend()
 plt.show()
 
 plt.xlim(0,100)
-plt.hist(bez_kursu, bins=25, label='Bez kursu', color='#ff9999', density=True)
+plt.hist(bez_kursu, bins=25, label='Bez kursu', color='#ff9999')
 
-mu, std = stats.norm.fit(bez_kursu)
-x = np.linspace(0, 100, 100)
-plt.plot(x, stats.norm.pdf(x, mu, std), color='darkred', lw=2)
 
 plt.title('Wyniki uczniów bez kursu przygotowawczego')
-plt.xlabel('Liczba uczniów')
-plt.ylabel('Wyniki testu')
+plt.ylabel('Liczba uczniów')
+plt.xlabel('Wyniki testu')
 plt.legend()
 plt.show()
 
