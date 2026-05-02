@@ -35,6 +35,16 @@
 	\end{aligned}
 	\]
 	Ta średnia to średni wynik w grupie. Jeśli $\bar{x}$ dla grupy po kursie będzie większa niż dla grupy bez kursu, to kurs będzie podnosił ogólny poziom wiedzy studenta. \\
+	Obliczono średnie arytmetyczne dla obu analizowanych grup:\\
+	Grupa po kursie przygotowawczym:\\
+	\[
+	\bar{x} = \frac{1}{358} \sum_{i = 1}^{358} x_{i}=69.695530
+	\]
+	Grupa bez kursu przygotowawczego:\\
+	\[
+	\bar{x} = \frac{1}{642} \sum_{i = 1}^{642} x_{i}= 64.077881
+	\]
+	Średnia arytmetyczna dla wyników po kursie jest wyższa od średniej dla wyników bez kursu. Warto zaznaczyć, że ta różnica nie jest duża, ale może wskazywać na pozytywną zależność między uczestniczeniem w kursie a osiągniętymi wynikami.
 	
 	\textbf{Mediana}. Wzór:
 	\[x_{med}=
@@ -48,6 +58,17 @@
 		x_i &- \text{$i$-ta uporządkowana obserwacja.}
 	\end{aligned}
 	\]
+	Mediana jest wartością środkową w uporządkowanym zbiorze danych, która dzieli go na dwie grupy. Oznacza to, że połowa obserwacji ma mniejsze lub równe wartości od mediany i analogicznie druga połowa ma niemniejsze wartości niż mediana.\\
+	Obliczono medianę dla obu analizowanych grup:\\
+	Grupa po kursie przygotowawczym:\\
+	\[x_{med}=
+	\frac{1}{2}\left(x_{\left(\frac{358}{2}\right)}+x_{\left(\frac{358}{2}+1\right)}\right)=\frac{1}{2}\left(x_{(179)}+x_{(180)}\right)=69
+	\]
+	Grupa bez kursu przygotowawczego:\\
+	\[x_{med}=
+	\frac{1}{2}\left(x_{\left(\frac{642}{2}\right)}+x_{\left(\frac{642}{2}+1\right)}\right)=\frac{1}{2}\left(x_{(321)}+x_{(322)}\right)=64
+	\]
+	Wyższa mediana dla grupy uczestniczących w kursie przygotowawczym sugeruje, że te osoby osiągają wyższe przeciętne wyniki niż w grupie nieuczestniczących w kursie. Różnica median nie jest duża, ale sugeruje pozytywny wpływ na osiągane wyniki.
 	
 	\textbf{Średnia ucinana.} Wzór:
 	\[\bar{x}_{\text{u}} = \frac{1}{n - 2k} \sum_{i=k+1}^{n-k} x_i\]
@@ -141,7 +162,13 @@
 		\bar{x} &- \text{średnia arytmetyczna próby.}
 	\end{aligned}
 	\]
-	
+	Wariancja określa jak bardzo wartości z danego zbioru różnią się od średniej arytmetycznej. Wysoka wariancja oznacza duże zróżnicowanie wyników, natomiast niska ich skupienie wokół średniej.\\
+	Wyznaczono wariancję dla obu analizowanych grup:\\
+	Grupa po kursie przygotowawczym:\\
+	\[s^2 = \frac{1}{358-1}\sum_{i=1}^{358}(x_i - 69.695530)^2= \frac{1}{357}\sum_{i=1}^{358}(x_i - 69.695530)^2=208.649335\]
+	Grupa bez kursu przygotowawczego:\\
+	\[s^2 = \frac{1}{642-1}\sum_{i=1}^{642}(x_i - 64.077881)^2= \frac{1}{641}\sum_{i=1}^{642}(x_i - 64.077881)^2=230.808277\]
+	Różnica między wariancjami nie jest duża, natomiast możemy zaobserwować nieco niższą wartość dla próbki po kursie przygotowawczym. Sugeruje to mniejsze zróżnicowanie wyników, co za tym idzie, bardziej wyrównany poziom wiedzy studentów niż w grupie, która tego kursu nie wykonała.\\
 	\textbf{Odchylenie standardowe.} Wzór:
 	\[s = \sqrt{\dfrac{\sum (x_{i} - \bar{x})^2}{n - 1}}.\]
 	\[
@@ -151,8 +178,19 @@
 		\bar{x} &- \text{średnia arytmetyczna próby.}
 	\end{aligned}
 	\]
-
+	Odchylenie standardowe, będące pierwiastkiem wariancji, pokazuje typową zmienność danych wokół średniej arytmetycznej.\\
+	Wyznaczono odchylenie standardowe dla obu analizowanych grup:\\
+	Grupa po kursie przygotowawczym:\\
+	\[
+	s=\sqrt{s^2}=\sqrt{208.649335}=14.444699
+	\]
+	Grupa bez kursu przygotowawczego:
+	\[
+	s=\sqrt{s^2}=\sqrt{230.808277}=15.192375
+	\]
+	Różnica w odchyleniach standardowych jest bardzo niewielka. W grupie po kursie przygotowawczym zaobserwowano nieznacznie niższe odchylenie standardowe, co wskazuje na o drobinę większą przewidywalność i stabilność wyników niż w grupie bez kursu.
 	
+
 	\textbf{Odchylenie przeciętne od wartości średniej.} Wzór:
 	\[
 	d = \frac{1}{n}\sum_{i=1}^{n} |x_i - \bar{x}|
@@ -164,17 +202,17 @@
 		\bar{x} &- \text{średnia arytmetyczna próby.}
 	\end{aligned}
 	\]
-	
-	\textbf{Współczynnik zmienności.} Wzór:
+	Odchylenie przeciętne od wartości średniej mówi, o ile średnio wartości ze zbioru danych się różnią od średniej arytmetycznej.
+	Obliczono odchylenie przeciętne od wartości średniej dla obu analizowanych grup:\\
+	Grupa po kursie przygotowawczym:\\
 	\[
-	\nu = \frac{s}{\bar{x}} \cdot 100\%
+	d = \frac{1}{358}\sum_{i=1}^{358} |x_i - 69.695530|=11.584282
 	\]
+	Grupa bez kursu przygotowawczego:\\
 	\[
-	\begin{aligned}
-		s &- \text{odchylenie standardowe z próby,} \\
-		\bar{x} &- \text{średnia arytmetyczna próby.}
-	\end{aligned}
+	d = \frac{1}{642}\sum_{i=1}^{642} |x_i - 64.077881|=12.010073
 	\]
+	Nieznacznie wyższa wartość odchylenia dla grupy bez kursu sugeruje, że wyniki odbiegają od średniej arytmetycznej o drobinę bardziej niż dla drugiej grupy. Różnica jest bardzo niewielka, dlatego efekt jest niewyraźny.
 	
 %miary asymetrii
 	\textbf{Współczynnik skośności (asymetrii).} Wzór:
@@ -189,6 +227,18 @@
 		x_i &- \text{i-ta obserwacja w zbiorze danych,} 
 	\end{aligned}
 	\]
+	Współczynnik skośności opisuje asymetrię rozkładu danych. Pozwala ocenić, czy w rozkładzie występuje przewaga wartości niskich lub wysokich.
+	Obliczono współczynnik skośności dla obu analizowanych grup:\\
+	Grupa po kursie przygotowawczym:\\
+	\[
+	\alpha =\frac{358}{(358-1)(358-2)}\sum_{i=1}^{358} \left(\frac{x_i-\bar{x}}{s}\right)^3=\frac{179}{63546}\sum_{i=1}^{358} \left(\frac{x_i-69.695530}{14.444699}\right)^3=-0.147522
+	\]
+	Grupa bez kursu przygotowawczego:\\
+		\[
+	\alpha =\frac{642}{(642-1)(642-2)}\sum_{i=1}^{642} \left(\frac{x_i-\bar{x}}{s}\right)^3=
+	\frac{321}{205120}\sum_{i=1}^{642} \left(\frac{x_i-64.077881}{15.192375}\right)^3=-0.328723
+	\]
+	Wartości współczynnika skośności dla obu analizowanych grup są ujemne, co oznacza lewostronną skośność. Większość obserwacji znajduje się przy wyższych wartościach. Wartość bezwzględna skośności bliska $0$ dla grupy po kursie przygotowawczym wskazuje na rozkład bliski symetrycznemu. Troszkę większa dla drugiej grupy mówi o większej ilości niskich odstających wyników, ale ten rozkład również nie wykazuje dużej asymetrii.
 	
 %miary koncentracji
 	\textbf{Kurtoza.} Wzór:
