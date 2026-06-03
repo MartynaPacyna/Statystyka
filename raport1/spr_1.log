@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.28)  2 MAY 2026 22:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.28)  4 MAY 2026 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -865,7 +865,7 @@ L3 programming layer <2025-01-18>
 Here is how much of TeX's memory you used:
  5780 strings out of 473189
  93078 string characters out of 5719958
- 499666 words of memory out of 5000000
+ 499675 words of memory out of 5000000
  28983 multiletter control sequences out of 15000+600000
  569403 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -885,7 +885,7 @@ fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2025/texmf-dist/fonts/type
 m-super/sfrm1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sf
 rm1440.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb
 >
-Output written on spr_1.pdf (9 pages, 485853 bytes).
+Output written on spr_1.pdf (9 pages, 485873 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
