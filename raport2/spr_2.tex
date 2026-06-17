@@ -23,13 +23,23 @@
 	
 	\section{Wstęp}
 	\section{Testowanie hipotezy dotyczącej średniej}
-		W tym zadaniu wykorzystaliśmy dane przekazane nam przez prowadzącą, aby przeprowadzić testowanie hipotezy zerowej H0 : µ = 1.5 przeciwko trzem hipotezom alternatywnym:H1 : µ ̸ = 1.5, H1 : µ > 1.5, H1 : µ < 1.5. Obliczono statystyki testowe takie jak: 
+		W tym zadaniu należało wykorzystać dane przekazane przez prowadzącą, aby przeprowadzić testowanie hipotezy zerowej H0 : $\mu = 1.5$ przeciwko trzem hipotezom alternatywnym:H1 : $\mu ̸ = 1.5$, H1 : $\mu > 1.5$, H1 : $\mu < 1.5$. Najpierw wyznaczymy wartość statystyki testowej. Pierwsze porównanie przeprowadzimy przez wyznaczenie hipotezy testowej. Uzyjemy statystyki testowej Z, ponieważ mamy do czynienia z próbami o rozkładzie normalnym, o dużej wielkości oraz ze znanym odchyleniem standardowym. Wyliczamy go z poniższego wzoru: 
+		\begin{equation*}
+			Z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}}
+		\end{equation*}
+		
+		Gdzie:
 		\begin{itemize}
-		\item Średnia próby: 1.45546595425
-		\item Mediana próby: 1.4577302
-		\item Odchylenie próby: 0.19897137413206548
-		\item Wariancja próby: 0.03958960772400237
+			\item $\bar{X}$ -- średnia z danych,
+			\item $\mu_0 = 1.5$ -- wartość z hipotezy zerowej,
+			\item $\sigma = 0.2$ -- sztywna wartość z treści zadania,
+			\item $n$ -- liczba elementów.
 		\end{itemize}
+		
+		Dla naszych danych $Z \approx -7.04$ co stanowi bardzo rzadki wynik. Wynik taki wyszedł między innymi dlatego, że nasza średnia z próby $\bar{X} = 1.455$. Jest to wynik mniejszy niż nasz oczekiwany (1.5). Nasza próba jest też bardzo duża, bo stanowi 1000 elementów.  Przy tak gigantycznej próbie, nawet mała różnica od zakładanej średniej staje się znacząca. Taki wynik oznacza, że nasza próba jest bardzo czuła i precyzyjna. 
+		
+		Kolejna częścia będzie określenie obszaru krytycznego dla każdego przypadku. 
+	\
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=1\textwidth]{Figure_2.png} 

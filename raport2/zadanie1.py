@@ -6,8 +6,8 @@ import statistics
 import math
 
 dane = []
-
-with open("dane1.txt", "r", encoding="utf-8") as plik:
+#wczytywanie danych
+with open("raport2\dane1.txt", "r", encoding="utf-8") as plik:
     for linia in plik:
         tekst = linia.strip()
         if not tekst:
@@ -28,14 +28,16 @@ srednia = statistics.mean(dane)
 print(f'Średnia porby: {srednia}')
 mediana = np.median(dane)
 print(f'Mediana porby: {mediana}')
-odchylenie = np.std(dane)
-print(f'Odchylenie porby: {odchylenie}')
+odchylenie = 0.2
 wariancja = np.var(dane)
 print(f'Wariancja porby: {wariancja}')
 speed_test_stdev = 0.2
 print(f'STEDV porby: {speed_test_stdev}')
 
-# blad 1 rodzaju, 2 rodzaju, moc testu
+#STATYSTYKA TESTOWA ma wzor
+stat = (srednia - mi)/(odchylenie/np.sqrt(dlugosc))
+print(stat)
+"""""
 z_score = (srednia - mi) / (speed_test_stdev/math.sqrt(dlugosc))
 print(f'Z: {z_score}')
 #Hipoteza pierwsza, czyli obcinanie ogonów po lewej i po prawej stronie
@@ -90,3 +92,4 @@ plt.legend()
 plt.grid(True)
 
 plt.show()
+"""
