@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.10)  17 JUN 2026 23:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.10)  20 JUN 2026 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,52 +679,52 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 .cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
-! LaTeX Error: Unicode character ̸ (U+0338)
-               not set up for use with LaTeX.
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.26 ...trzem hipotezom alternatywnym:H1 : $\mu ̸
-                                                   = 1.5$, H1 : $\mu > 1.5$,...
 
-You may provide a definition with
-\DeclareUnicodeCharacter 
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
-<Figure_2.png, id=1, 578.16pt x 289.08pt>
-File: Figure_2.png Graphic file (type png)
-<use Figure_2.png>
-Package pdftex.def Info: Figure_2.png  used on input line 44.
-(pdftex.def)             Requested size: 483.69687pt x 241.8463pt.
-<Figure_1.png, id=3, 578.16pt x 289.08pt>
-File: Figure_1.png Graphic file (type png)
-<use Figure_1.png>
-Package pdftex.def Info: Figure_1.png  used on input line 48.
-(pdftex.def)             Requested size: 483.69687pt x 241.8463pt.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
+
+ []
+
 [1
 
 {C:/Users/Martyna/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<Figure_3.png, id=18, 578.16pt x 289.08pt>
+<Figure_1.png, id=15, 1110.0672pt x 544.9158pt>
+File: Figure_1.png Graphic file (type png)
+<use Figure_1.png>
+Package pdftex.def Info: Figure_1.png  used on input line 50.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_2.png, id=17, 1110.0672pt x 544.9158pt>
+File: Figure_2.png Graphic file (type png)
+<use Figure_2.png>
+Package pdftex.def Info: Figure_2.png  used on input line 54.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_3.png, id=18, 1110.0672pt x 544.9158pt>
 File: Figure_3.png Graphic file (type png)
 <use Figure_3.png>
-Package pdftex.def Info: Figure_3.png  used on input line 52.
-(pdftex.def)             Requested size: 483.69687pt x 241.8463pt.
- [2 <./Figure_2.png> <./Figure_1.png>] [3 <./Figure_3.png>] (spr_2.aux)
+Package pdftex.def Info: Figure_3.png  used on input line 58.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+ [2 <./Figure_1.png> <./Figure_2.png> <./Figure_3.png>] (spr_2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5795 strings out of 467871
- 95038 string characters out of 5417408
- 504761 words of memory out of 5000000
- 34620 multiletter control sequences out of 15000+600000
+ 5794 strings out of 467871
+ 95033 string characters out of 5417408
+ 507761 words of memory out of 5000000
+ 34619 multiletter control sequences out of 15000+600000
  636091 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,609b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,658b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
 rm1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
 pi600\ecrm1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
@@ -737,9 +737,9 @@ AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/User
 s/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb
 ><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb>
-Output written on spr_2.pdf (3 pages, 176383 bytes).
+Output written on spr_2.pdf (2 pages, 249574 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
+ 193 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

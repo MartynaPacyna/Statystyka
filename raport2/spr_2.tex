@@ -23,7 +23,7 @@
 	
 	\section{Wstęp}
 	\section{Testowanie hipotezy dotyczącej średniej}
-		W tym zadaniu należało wykorzystać dane przekazane przez prowadzącą, aby przeprowadzić testowanie hipotezy zerowej H0 : $\mu = 1.5$ przeciwko trzem hipotezom alternatywnym:H1 : $\mu ̸ = 1.5$, H1 : $\mu > 1.5$, H1 : $\mu < 1.5$. Najpierw wyznaczymy wartość statystyki testowej. Pierwsze porównanie przeprowadzimy przez wyznaczenie hipotezy testowej. Uzyjemy statystyki testowej Z, ponieważ mamy do czynienia z próbami o rozkładzie normalnym, o dużej wielkości oraz ze znanym odchyleniem standardowym. Wyliczamy go z poniższego wzoru: 
+		W tym zadaniu należało wykorzystać dane przekazane przez prowadzącą, aby przeprowadzić testowanie hipotezy zerowej H0 : $\mu = 1.5$ przeciwko trzem hipotezom alternatywnym. Najpierw wyznaczymy wartość statystyki testowej. To taka funkcja próby, na podstawie której wnioskuje się o odrzuceniu lub nie hipotezy statystycznej. Pierwsze porównanie przeprowadzimy przez wyznaczenie hipotezy testowej. Uzyjemy statystyki testowej Z, ponieważ mamy do czynienia z próbami o rozkładzie normalnym, o dużej wielkości oraz ze znanym odchyleniem standardowym. Wyliczamy go z poniższego wzoru: 
 		\begin{equation*}
 			Z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}}
 		\end{equation*}
@@ -36,21 +36,26 @@
 			\item $n$ -- liczba elementów.
 		\end{itemize}
 		
-		Dla naszych danych $Z \approx -7.04$ co stanowi bardzo rzadki wynik. Wynik taki wyszedł między innymi dlatego, że nasza średnia z próby $\bar{X} = 1.455$. Jest to wynik mniejszy niż nasz oczekiwany (1.5). Nasza próba jest też bardzo duża, bo stanowi 1000 elementów.  Przy tak gigantycznej próbie, nawet mała różnica od zakładanej średniej staje się znacząca. Taki wynik oznacza, że nasza próba jest bardzo czuła i precyzyjna. 
+		Dla naszych danych $Z \approx -7.04$ co stanowi bardzo rzadki wynik. Obliczyliśmy również błąd standardowy (który jest mianownikiem równania powyżej), z którego wychodzi nam $SE = 0.0063$. Wynik taki wyszedł między innymi dlatego, że nasza średnia z próby $\bar{X} = 1.455$. Jest to wynik mniejszy niż nasz oczekiwany (1.5). Nasza próba jest też bardzo duża, bo stanowi 1000 elementów.  Przy tak gigantycznej próbie, nawet mała różnica od zakładanej średniej staje się znacząca. Taki wynik oznacza, że nasza próba jest bardzo czuła i precyzyjna. \\
 		
-		Kolejna częścia będzie określenie obszaru krytycznego dla każdego przypadku. 
+		Kolejnym krokiem będzie określenie obszaru krytycznego dla każdego przypadku. Jeśli hipoteza zerowa mówi o tym, że coś jest różne, to obszar krytyczny jest dwustronny i zaznaczamy zarówno prawą jak i lewą końcówkę rozkładu. Jeśli hipoteza alternatywna jest sformułowana jako mniejsze lub większe, to zaznaczamy obszar odrzuceń albo z prawej albo z lewej strony.\\
+		
+		Następnie dla każdej hipotezy alternatywnej obliczymy p-value, czyli wartość p. Jest to prawdopodobieństwo otrzymania wyników równie skrajnych lub jeszcze bardziej skrajnych niż uzyskane w badaniu, przy założeniu że hipoteza zerowa jest prawdziwa. Jest TO alternatywny sposób podejmowania decyzjji w testowaniu hipotez.
+		Decyzja na podstawie wartości p jest podejmowana przez porównanie wartości p z poziomem istotności $\alpha$. Jeśli p value $\leq \alpha $ odrzucamy hipoteze zerową. Wartość p można interpretować jako najmnijeszy poziom istotności, przy którym moglibysmy odrzucić $H_0$. \\
+		
+		Zacznijmy od przeanalizowania hipotezy alternatynej [$H_1$: $\mu \neq 1.5$]. Hipoteza alternatywna stwierdza, że badany paramtr rózni się od wartości określonej w hipotezie zerowej. W tym przypadku obszar krytyczny znajduje się w obu ogonach rozkładu statystyki testowej. Odrzucamy $H_0$ jeśli wartość statystyki testowej jest ekstremalnie duża lub ekstremalnie mała.
 	\
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=1\textwidth]{Figure_2.png} 
+			\includegraphics[width=0.8\textwidth]{Figure_1.png} 
 		\end{figure}
 		\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\textwidth]{Figure_1.png} 
+		\includegraphics[width=0.8\textwidth]{Figure_2.png} 
 		\end{figure}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=1\textwidth]{Figure_3.png} 
+			\includegraphics[width=0.8\textwidth]{Figure_3.png} 
 		\end{figure}		
 		
 
