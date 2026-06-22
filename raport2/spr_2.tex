@@ -22,6 +22,7 @@
 	\end{center}
 	
 	\section{Wstęp}
+		Celem sprawozdania jest weryfikacja metod testowania hipotez statystycznych dotyczących średniej i wariancji. W pracy przeprowadzono symulacje komputerowe, których zadaniem było wyznaczenie wartości statystyk testowych, obszarów krytycznych oraz p-wartości. Analiza obejmuje ocenę skuteczności testów poprzez badanie błędów I i II rodzaju oraz wyznaczenie mocy testów w warunkach dużej liczebności próby.
 	\section{Testowanie hipotezy dotyczącej średniej}
 		W tym zadaniu należało wykorzystać dane przekazane przez prowadzącą, aby przeprowadzić testowanie hipotezy zerowej H0 : $\mu = 1.5$ przeciwko trzem hipotezom alternatywnym. Najpierw wyznaczymy wartość statystyki testowej. To taka funkcja próby, na podstawie której wnioskuje się o odrzuceniu lub nie hipotezy statystycznej. Pierwsze porównanie przeprowadzimy przez wyznaczenie hipotezy testowej. Uzyjemy statystyki testowej Z, ponieważ mamy do czynienia z próbami o rozkładzie normalnym, o dużej wielkości oraz ze znanym odchyleniem standardowym. Wyliczamy go z poniższego wzoru: 
 		\begin{equation*}
@@ -507,5 +508,7 @@
 			\end{tabular}
 		\end{table}
 	Analiza wskazuje, że przy niewielkich różnicach między wariancją rzeczywistą a założoną, testy statystyczne często zawodzą, nie odrzucając fałszywej hipotezy zerowej. Jeśli rzeczywista wariancja tylko nieznacznie różni się od założonej, test często nie odrzuca hipotezy zerowej. Skuteczność zauważenia błędu rośnie gdy ta różnica robi się coraz większa.
+	\section{Wnioski}
+	Symulacje potwierdziły teoretyczną poprawność testów statystycznych – empiryczny błąd I rodzaju jest zgodny z założonym poziomem $\alpha$. Analiza wykazała, że moc testu rośnie wraz z dystansem między parametrem rzeczywistym a hipotezowanym. 
 
 \end{document}
