@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.10)  22 JUN 2026 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.10)  22 JUN 2026 13:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -723,67 +723,114 @@ l.74 		\item  $
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<Figure_4.png, id=24, 1110.0672pt x 544.9158pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+[3 <./Figure_3.png>]
+<Figure_4.png, id=34, 1110.0672pt x 544.9158pt>
 File: Figure_4.png Graphic file (type png)
 <use Figure_4.png>
-Package pdftex.def Info: Figure_4.png  used on input line 85.
+Package pdftex.def Info: Figure_4.png  used on input line 93.
 (pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
-<Figure_5.png, id=25, 1110.0672pt x 544.9158pt>
+<Figure_5.png, id=35, 1110.0672pt x 544.9158pt>
 File: Figure_5.png Graphic file (type png)
 <use Figure_5.png>
-Package pdftex.def Info: Figure_5.png  used on input line 89.
+Package pdftex.def Info: Figure_5.png  used on input line 97.
 (pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
-<Figure_6.png, id=26, 1110.0672pt x 544.9158pt>
+<Figure_6.png, id=36, 1110.0672pt x 544.9158pt>
 File: Figure_6.png Graphic file (type png)
 <use Figure_6.png>
-Package pdftex.def Info: Figure_6.png  used on input line 93.
+Package pdftex.def Info: Figure_6.png  used on input line 101.
 (pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
-[3 <./Figure_3.png> <./Figure_4.png>]
-<Figure_7.png, id=32, 1110.0672pt x 544.9158pt>
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 			\item  $
+                 \alpha$ = 0.01 \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[4 <./Figure_4.png> <./Figure_5.png> <./Figure_6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+[5]
+<Figure_7.png, id=46, 1110.0672pt x 544.9158pt>
 File: Figure_7.png Graphic file (type png)
 <use Figure_7.png>
-Package pdftex.def Info: Figure_7.png  used on input line 98.
+Package pdftex.def Info: Figure_7.png  used on input line 125.
 (pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
-<Figure_8.png, id=33, 1110.0672pt x 544.9158pt>
+<Figure_8.png, id=47, 1110.0672pt x 544.9158pt>
 File: Figure_8.png Graphic file (type png)
 <use Figure_8.png>
-Package pdftex.def Info: Figure_8.png  used on input line 102.
+Package pdftex.def Info: Figure_8.png  used on input line 129.
 (pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
-<Figure_9.png, id=34, 1110.0672pt x 544.9158pt>
+<Figure_9.png, id=48, 1110.0672pt x 544.9158pt>
 File: Figure_9.png Graphic file (type png)
 <use Figure_9.png>
-Package pdftex.def Info: Figure_9.png  used on input line 106.
+Package pdftex.def Info: Figure_9.png  used on input line 133.
 (pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
- [4 <./Figure_5.png> <./Figure_6.png> <./Figure_7.png>] [5 <./Figure_8.png> <./
-Figure_9.png>] (spr_2.aux)
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 			\item  $
+                 \alpha$ = 0.01 \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[6 <./Figure_7.png> <./Figure_8.png> <./Figure_9.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+[7] (spr_2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5843 strings out of 467871
- 95915 string characters out of 5417408
+ 5847 strings out of 467871
+ 95955 string characters out of 5417408
  507761 words of memory out of 5000000
- 34668 multiletter control sequences out of 15000+600000
- 636091 words of font info for 59 fonts, out of 8000000 for 9000
+ 34670 multiletter control sequences out of 15000+600000
+ 637621 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,658b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
-rm1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecrm1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecbx1728.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Martyna\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk><C:/Users/Martyna/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Martyna/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/User
-s/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb
+ 57i,7n,65p,1054b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
+rm0800.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\tcrm1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecrm1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\Martyna\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Martyna\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk><C:/Users/Martyna/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/
+Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 ><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb>
-Output written on spr_2.pdf (5 pages, 544373 bytes).
+/cmmi6.pfb><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Martyna/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Martyna/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Martyna/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on spr_2.pdf (7 pages, 601155 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
+ 265 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
