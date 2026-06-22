@@ -21,8 +21,8 @@
 		\Large Martyna Pacyna 287440 \\ Lena Rojecka 287460
 	\end{center}
 	
-
 	\section{Wstęp}
+		Celem sprawozdania jest weryfikacja metod testowania hipotez statystycznych dotyczących średniej i wariancji. W pracy przeprowadzono symulacje komputerowe, których zadaniem było wyznaczenie wartości statystyk testowych, obszarów krytycznych oraz p-wartości. Analiza obejmuje ocenę skuteczności testów poprzez badanie błędów I i II rodzaju oraz wyznaczenie mocy testów w warunkach dużej liczebności próby.
 	\section{Testowanie hipotezy dotyczącej średniej}
 		W tym zadaniu należało wykorzystać dane przekazane przez prowadzącą, aby przeprowadzić testowanie hipotezy zerowej H0 : $\mu = 1.5$ przeciwko trzem hipotezom alternatywnym. Najpierw wyznaczymy wartość statystyki testowej. To taka funkcja próby, na podstawie której wnioskuje się o odrzuceniu lub nie hipotezy statystycznej. Pierwsze porównanie przeprowadzimy przez wyznaczenie hipotezy testowej. Uzyjemy statystyki testowej Z, ponieważ mamy do czynienia z próbami o rozkładzie normalnym, o dużej wielkości oraz ze znanym odchyleniem standardowym. Wyliczamy go z poniższego wzoru: 
 		\begin{equation*}
@@ -70,8 +70,8 @@
 			\centering
 			\includegraphics[width=0.8\textwidth]{Figure_3.png} 
 		\end{figure}
-	\begin{itemize}
 		W tym przypadku granice były równe kolejno dla poziomu istotności:
+	\begin{itemize}
 		\item  $\alpha$ = 0.01 \\
 		granica lewostronna -2.57, granica prawostronna 2.57
 		\item $\alpha$ = 0.05 \\
@@ -102,8 +102,8 @@
 			\includegraphics[width=0.8\textwidth]{Figure_6.png} 
 		\end{figure}
 		
+		W tym przypadku rozpatrujemy jedynie granice prawostronną. Kolejno dla poziomu istotności:
 		\begin{itemize}
-			W tym przypadku rozpatrujemy jedynie granice prawostronną. Kolejno dla poziomu istotności:
 			\item  $\alpha$ = 0.01 \\
 			granica prawostronna 2.32
 			\item $\alpha$ = 0.05 \\
@@ -134,8 +134,8 @@
 			\includegraphics[width=0.8\textwidth]{Figure_9.png} 
 		\end{figure}
 		
+		W tym przypadku rozpatrujemy jedynie granice lewostronną. Kolejno dla poziomu istotności:
 		\begin{itemize}
-			W tym przypadku rozpatrujemy jedynie granice lewostronną. Kolejno dla poziomu istotności:
  			\item  $\alpha$ = 0.01 \\
 			granica lewostronna -2.32
 			\item $\alpha$ = 0.05 \\
@@ -223,8 +223,7 @@
 		\end{table}
 		
 		Interpretacja: Zdolność testu do wykrycia fałszywości hipotezy zerowej drastycznie rośnie, gdy rzeczywista średnia oddala się od wartości hipotetycznej. Dla punktów skrajnych, takich jak $1.47$ i $1.53$, moc testu osiąga niemal maksymalną wartość równą $1$ (lub $0.999$), co oznacza, że przy próbie wielkości $n = 1000$ test jest perfekcyjnie czuły i wykryje nawet tak małe przesunięcia średniej. Największą trudność test ma z identyfikacją wartości położonych najbliżej centrum ($1.49$ i $1.51$), wykazując niską skuteczność detekcji. Porównując wyniki dla tych samych punktów (np. dla $\mu = 1.49$ oraz $\mu = 1.51$), można zauważyć przewagę testów jednostronnych nad testem dwustronnym. Dla $\mu = 1.49$ test dwustronny ma moc wynoszącą tylko $0.362$, podczas gdy dedykowany test lewostronny osiąga moc $0.435$. Z kolei dla $\mu = 1.51$ test prawostronny wykazuje moc $0.451$ w porównaniu do $0.351$ dla testu dwustronnego.
-		
-		
+
 	\section{Testowanie hipotezy dotyczącej wariancji}	
 	\subsection{Testowanie hipotezy dotyczącej wariancji dla $\alpha =0.05$}	
 		Wykorzystano udostępnione dane i przeprowadzono testowanie hipotezy zerowej $H_0:\sigma^2=1.5$ przeciwko trzem hipotezom alternatywnym: $H_1:\sigma^2\neq1.5$, $H_1:\sigma^2>1.5$, $H_1:\sigma^2<1.5$ dla poziomu istotności $\alpha =0.05$. Dla rozkładu normalnego, do testów wariancji użyto statystyki chi-kwadrat.\\
@@ -509,6 +508,7 @@
 			\end{tabular}
 		\end{table}
 	Analiza wskazuje, że przy niewielkich różnicach między wariancją rzeczywistą a założoną, testy statystyczne często zawodzą, nie odrzucając fałszywej hipotezy zerowej. Jeśli rzeczywista wariancja tylko nieznacznie różni się od założonej, test często nie odrzuca hipotezy zerowej. Skuteczność zauważenia błędu rośnie gdy ta różnica robi się coraz większa.
-	
+	\section{Wnioski}
+	Symulacje potwierdziły teoretyczną poprawność testów statystycznych – empiryczny błąd I rodzaju jest zgodny z założonym poziomem $\alpha$. Analiza wykazała, że moc testu rośnie wraz z dystansem między parametrem rzeczywistym a hipotezowanym. 
 
 \end{document}
