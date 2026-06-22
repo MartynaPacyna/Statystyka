@@ -176,7 +176,7 @@ plt.ylabel("Otrzymany błąd I rodzaju")
 plt.grid(True, axis='y', linestyle=':', alpha=0.6)
 plt.legend()
 plt.show()
-"""
+
 import numpy as np
 import scipy.stats as stats
 import statistics
@@ -247,3 +247,85 @@ for mu in mu_mniejsze:
 
     przyblizenie_bledu = w_obszarze_akceptacji / n
     print(f"mu = {mu}: Błąd II rodzaju = {przyblizenie_bledu}")
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+import statistics
+
+sigma = 0.2
+mu = 1.5
+n = 1000
+m = 100
+
+poziomy_alpha = [0.01, 0.05, 0.10]
+rozkład_z = stats.norm(0, 1)
+
+# Słownik do przechowywania kompletnych danych symulacji
+wyniki = {alpha: {"dwustronny": [], "lewostronny": [], "prawostronny": []} for alpha in poziomy_alpha}
+
+# --- SYMULACJA ---
+for alpha in poziomy_alpha:
+    g_lewa_2s = rozkład_z.ppf(alpha / 2)
+    g_prawa_2s = rozkład_z.ppf(1 - alpha / 2)
+    g_lewa_1s = rozkład_z.ppf(alpha)
+    g_prawa_1s = rozkład_z.ppf(1 - alpha)
+
+    for _ in range(m):
+        w_krytycznym_2s = 0
+        w_krytycznym_left = 0
+        w_krytycznym_right = 0
+
+        for _ in range(n):
+            X = np.random.normal(mu, sigma, n)
+            srednia = statistics.mean(X)
+            stat = (srednia - mu) / (sigma / np.sqrt(len(X)))
+
+            # 1. Test dwustronny
+            if stat <= g_lewa_2s or stat >= g_prawa_2s:
+                w_krytycznym_2s += 1
+                
+            # 2. Test lewostronny
+            if stat <= g_lewa_1s:
+                w_krytycznym_left += 1
+                
+            # 3. Test prawostronny
+            if stat >= g_prawa_1s:
+                w_krytycznym_right += 1
+
+        wyniki[alpha]["dwustronny"].append(w_krytycznym_2s / n)
+        wyniki[alpha]["lewostronny"].append(w_krytycznym_left / n)
+        wyniki[alpha]["prawostronny"].append(w_krytycznym_right / n)
+
+# --- RYSOWANIE WYKRESU (Styl z obrazka) ---
+fig, axes = plt.subplots(1, 3, figsize=(15, 6), sharey=True)
+
+hipotezy_etykiety = ["$H_1: \\mu \\neq 1.5$", "$H_1: \\mu > 1.5$", "$H_1: \\mu < 1.5$"]
+
+for i, alpha in enumerate(poziomy_alpha):
+    ax = axes[i]
+    
+    # Przygotowanie danych do danego panelu (kolejność jak na osi X)
+    dane_panelu = [
+        wyniki[alpha]["dwustronny"],
+        wyniki[alpha]["prawostronny"],
+        wyniki[alpha]["lewostronny"]
+    ]
+    
+    # Rysowanie boxplotów
+    ax.boxplot(dane_panelu, labels=hipotezy_etykiety)
+    
+    # Czerwona pozioma linia wartości teoretycznej przechodząca przez cały panel
+    ax.axhline(y=alpha, color='pink', linestyle='-', linewidth=1.5, label=f'wartość teoretyczna $\\alpha = {alpha}$')
+    
+    # Stylizacja pojedynczego panelu
+    ax.set_title(f"Poziom istotności $\\alpha = {alpha}$", fontsize=10)
+    ax.legend(loc='upper right', fontsize=8)
+    ax.set_ylim(-0.02, 0.15) # Dopasowanie skali Y, żeby wykresy ładnie wyglądały obok siebie
+    
+# Ustawienie wspólnej etykiety dla osi Y
+axes[0].set_ylabel("Empiryczny błąd I rodzaju")
+
+plt.tight_layout()
+plt.show()

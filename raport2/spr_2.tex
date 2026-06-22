@@ -21,8 +21,7 @@
 		\Large Martyna Pacyna 287440 \\ Lena Rojecka 287460
 	\end{center}
 	
-	
-<<<<<<< HEAD
+
 	\section{Wstęp}
 	\section{Testowanie hipotezy dotyczącej średniej}
 		W tym zadaniu należało wykorzystać dane przekazane przez prowadzącą, aby przeprowadzić testowanie hipotezy zerowej H0 : $\mu = 1.5$ przeciwko trzem hipotezom alternatywnym. Najpierw wyznaczymy wartość statystyki testowej. To taka funkcja próby, na podstawie której wnioskuje się o odrzuceniu lub nie hipotezy statystycznej. Pierwsze porównanie przeprowadzimy przez wyznaczenie hipotezy testowej. Uzyjemy statystyki testowej Z, ponieważ mamy do czynienia z próbami o rozkładzie normalnym, o dużej wielkości oraz ze znanym odchyleniem standardowym. Wyliczamy go z poniższego wzoru: 
@@ -161,11 +160,11 @@
 			\includegraphics[width=1\textwidth]{boxploty.png} 
 		\end{figure}
 		
-		Wykres pudełkowy przedstawia porównanie empirycznych, czyli uzyskanych w drodze symulacji komputerowej, wartości błędu I rodzaju z ich wartościami teoretycznymi dla trzech różnych poziomów istotności. Każde z trzech pionowych pudełek reprezentuje rozkład stu otrzymanych wyników symulacji, co pozwala ocenić stabilność i poprawność skonstruowanego testu statystycznego. 
-		
-		Główna, prostokątna część każdego wykresu, zwana pudełkiem, obejmuje tak zwany rozstęp międzykwartylowy, w którym skupia się dokładnie połowa wszystkich uzyskanych z symulacji wartości. Pozioma, pomarańczowa kreska przebiegająca przez środek tego pudełka to mediana, która wyznacza wartość środkową całego zbioru danych i pokazuje, wokół jakiego punktu najczęściej oscylowały wyniki symulacji. Pionowe linie wychodzące w górę i w dół z pudełka, nazywane wąsami, wyznaczają zasięg typowych rezultatów i pokazują zakres, w jakim mieści się większość pozostałych wyników. Pojedyncze kółka widoczne na samych końcach, znajdujące się poza zasięgiem wąsów, to wartości odstające, które reprezentują rzadkie, skrajne przypadki losowe powstałe w wyniku naturalnej zmienności generatora liczb. Poziome, czerwone linie przerywane ciągnące się przez całą szerokość wykresu pokazują idealne wartości teoretyczne, z którymi porównujemy nasze symulacje.
-		
-		Z wykresu jasno wynika, że mediany niemal idealnie pokrywają się z czerwonymi liniami przerywanymi, co stanowi ostateczny dowód na to, że test został zaprogramowany prawidłowo. Ponieważ wyniki symulacji komputerowej tak precyzyjnie skupiają się wokół założeń teoretycznych, wykres ten potwierdza, że rzeczywiste prawdopodobieństwo popełnienia błędu I rodzaju w naszym teście jest dokładnie równe założonemu poziomowi istotności alfa. \\
+	Wykres pudełkowy przedstawia porównanie empirycznych wartości błędu I rodzaju z ich wartościami teoretycznymi dla trzech poziomów istotności ($\alpha = 0.01; 0.05; 0.10$). Badanie przeprowadzone dla stu niezależnych powtórzeń pozwala ocenić poprawność i stabilność testu w zależności od wybranego poziomu istotności oraz rodzaju hipotezy alternatywnej. \\
+	
+	Wykres podzielono na trzy panele odpowiadające kolejnym wartościom $\alpha$, z których każdy zawiera trzy boxploty obrazujące rozkłady wyników. Główna część wykresu, czyli pudełko, wyznacza rozstęp międzykwartylowy skupiający połowę uzyskanych wartości empirycznych. Przebiegająca przez środek pomarańczowa linia to mediana, wyznaczająca punkt, wokół którego oscylowały wyniki symulacji. Pionowe wąsy pokazują zakres większości pozostałych rezultatów, pojedyncze punkty poza nimi to rzadkie wartości odstające, natomiast poziome, różowe linie odzwierciedlają idealne wartości teoretyczne. \\
+	
+	Z analizy wykresów płyną istotne wnioski statystyczne. Przede wszystkim empiryczne mediany we wszystkich dziewięciu przypadkach niemal idealnie pokrywają się z liniami teoretycznymi, co dowodzi, że algorytm testujący działa prawidłowo i ściśle zachowuje zadany reżim istotności. Ponadto zbliżona, wąska szerokość pudełek i wąsów niezależnie od kierunku hipotezy alternatywnej świadczy o wysokiej stabilności numerycznej procedury. Delikatny wzrost rozrzutu wyników wraz ze wzrostem $\alpha$ jest naturalną konsekwencją szerszych obszarów krytycznych. Podsumowując, eksperyment potwierdza, że rzeczywiste prawdopodobieństwo popełnienia błędu I rodzaju odpowiada założonemu poziomowi istotności $\alpha$, co czyni test w pełni wiarygodnym narzędziem. \\
 		\newpage
 		\textbf{Błąd II rodzaju} \\
 		Błąd II rodzaju jest prawdopodobieństwem nieodrzucenia fałszywej hipotezy zerowej. Jego wartość zależy między innymi od odległości parametru rzeczywistego od wartości określonej w hipotezie zerowej. \\
@@ -225,7 +224,6 @@
 		
 		Interpretacja: Zdolność testu do wykrycia fałszywości hipotezy zerowej drastycznie rośnie, gdy rzeczywista średnia oddala się od wartości hipotetycznej. Dla punktów skrajnych, takich jak $1.47$ i $1.53$, moc testu osiąga niemal maksymalną wartość równą $1$ (lub $0.999$), co oznacza, że przy próbie wielkości $n = 1000$ test jest perfekcyjnie czuły i wykryje nawet tak małe przesunięcia średniej. Największą trudność test ma z identyfikacją wartości położonych najbliżej centrum ($1.49$ i $1.51$), wykazując niską skuteczność detekcji. Porównując wyniki dla tych samych punktów (np. dla $\mu = 1.49$ oraz $\mu = 1.51$), można zauważyć przewagę testów jednostronnych nad testem dwustronnym. Dla $\mu = 1.49$ test dwustronny ma moc wynoszącą tylko $0.362$, podczas gdy dedykowany test lewostronny osiąga moc $0.435$. Z kolei dla $\mu = 1.51$ test prawostronny wykazuje moc $0.451$ w porównaniu do $0.351$ dla testu dwustronnego.
 		
-=======
 		
 	\section{Testowanie hipotezy dotyczącej wariancji}	
 	\subsection{Testowanie hipotezy dotyczącej wariancji dla $\alpha =0.05$}	
@@ -513,5 +511,4 @@
 	Analiza wskazuje, że przy niewielkich różnicach między wariancją rzeczywistą a założoną, testy statystyczne często zawodzą, nie odrzucając fałszywej hipotezy zerowej. Jeśli rzeczywista wariancja tylko nieznacznie różni się od założonej, test często nie odrzuca hipotezy zerowej. Skuteczność zauważenia błędu rośnie gdy ta różnica robi się coraz większa.
 	
 
->>>>>>> origin/raport2
 \end{document}
