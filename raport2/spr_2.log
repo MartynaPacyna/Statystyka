@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.10)  20 JUN 2026 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.10)  22 JUN 2026 13:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,49 +679,93 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 .cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 [1
 
 {C:/Users/Martyna/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
+
+ []
+
 <Figure_1.png, id=15, 1110.0672pt x 544.9158pt>
 File: Figure_1.png Graphic file (type png)
 <use Figure_1.png>
-Package pdftex.def Info: Figure_1.png  used on input line 50.
+Package pdftex.def Info: Figure_1.png  used on input line 62.
 (pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
 <Figure_2.png, id=17, 1110.0672pt x 544.9158pt>
 File: Figure_2.png Graphic file (type png)
 <use Figure_2.png>
-Package pdftex.def Info: Figure_2.png  used on input line 54.
+Package pdftex.def Info: Figure_2.png  used on input line 66.
 (pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
 <Figure_3.png, id=18, 1110.0672pt x 544.9158pt>
 File: Figure_3.png Graphic file (type png)
 <use Figure_3.png>
-Package pdftex.def Info: Figure_3.png  used on input line 58.
+Package pdftex.def Info: Figure_3.png  used on input line 70.
 (pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
- [2 <./Figure_1.png> <./Figure_2.png> <./Figure_3.png>] (spr_2.aux)
+[2 <./Figure_1.png> <./Figure_2.png>]
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74 		\item  $
+               \alpha$ = 0.01 \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<Figure_4.png, id=24, 1110.0672pt x 544.9158pt>
+File: Figure_4.png Graphic file (type png)
+<use Figure_4.png>
+Package pdftex.def Info: Figure_4.png  used on input line 85.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_5.png, id=25, 1110.0672pt x 544.9158pt>
+File: Figure_5.png Graphic file (type png)
+<use Figure_5.png>
+Package pdftex.def Info: Figure_5.png  used on input line 89.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_6.png, id=26, 1110.0672pt x 544.9158pt>
+File: Figure_6.png Graphic file (type png)
+<use Figure_6.png>
+Package pdftex.def Info: Figure_6.png  used on input line 93.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+[3 <./Figure_3.png> <./Figure_4.png>]
+<Figure_7.png, id=32, 1110.0672pt x 544.9158pt>
+File: Figure_7.png Graphic file (type png)
+<use Figure_7.png>
+Package pdftex.def Info: Figure_7.png  used on input line 98.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_8.png, id=33, 1110.0672pt x 544.9158pt>
+File: Figure_8.png Graphic file (type png)
+<use Figure_8.png>
+Package pdftex.def Info: Figure_8.png  used on input line 102.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_9.png, id=34, 1110.0672pt x 544.9158pt>
+File: Figure_9.png Graphic file (type png)
+<use Figure_9.png>
+Package pdftex.def Info: Figure_9.png  used on input line 106.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+ [4 <./Figure_5.png> <./Figure_6.png> <./Figure_7.png>] [5 <./Figure_8.png> <./
+Figure_9.png>] (spr_2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5794 strings out of 467871
- 95033 string characters out of 5417408
+ 5843 strings out of 467871
+ 95915 string characters out of 5417408
  507761 words of memory out of 5000000
- 34619 multiletter control sequences out of 15000+600000
+ 34668 multiletter control sequences out of 15000+600000
  636091 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,7n,65p,658b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -737,9 +781,9 @@ AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/User
 s/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb
 ><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb>
-Output written on spr_2.pdf (2 pages, 249574 bytes).
+Output written on spr_2.pdf (5 pages, 544373 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
+ 221 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

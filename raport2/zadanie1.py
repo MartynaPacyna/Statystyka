@@ -57,8 +57,9 @@ for alpha in [0.01, 0.05, 0.10]:
     
     #wyznaczenie wartosci krytycznych z dwoch stron czyli alpha/2 i 1-alpha/2
     granica_lewa = rozkład.ppf(alpha/2)
+    print(f'granica lewostronna {granica_lewa}')
     granica_prawa = rozkład.ppf(1 - alpha/2)
-    print(f"granica lewostronna {granica_lewa}, granica prawostronna {granica_prawa}")
+    print(f'granica prawostronna {granica_prawa}')
     
     plt.plot(x, y, label="rozkład normalny z parametrami N(0,1)")
 
@@ -73,48 +74,53 @@ for alpha in [0.01, 0.05, 0.10]:
     plt.legend(loc='upper right', fontsize='small')
     plt.show()
     
-"""
+
     # Przypadek B: mi > 1.5 (Prawostronny)
-    z_crit_right = stats.norm.ppf(1 - alpha)
-    p_right = 1 - stats.norm.cdf(z_score)
-    print(f"Hipoteza mi > 1.5:  Obszar krytyczny = ({z_crit_right:.4f}, +inf) | p-wartość = {p_right:.6f}")
+for alpha in [0.01, 0.05, 0.10]:
+
+    plt.figure(figsize=(10,10))
+    print(f"--- DLA POZIOMU ISTOTNOŚCI alpha = {alpha} ---")
+    mu = 1.5
+    sigma = 0.2
+    rozkład = stats.norm(0, 1)
+    x = np.linspace(-4, 4, 500)
+    y = rozkład.pdf(x) #gęstośc prawdopodbieństwa
     
+    #wyznaczenie wartosci krytycznych z dwoch stron czyli 1 - alpha
+    granica = rozkład.ppf(1 - alpha)
+    print(f'granica prawostronna {granica}')
+    
+    plt.plot(x, y, label="rozkład normalny z parametrami N(0,1)")
+
+    x_prawy = np.linspace(granica, 4 , 100)
+    plt.fill_between(x_prawy, rozkład.pdf(x_prawy), color='magenta', label='Obszar krytyczny prawostronny')
+    
+    plt.title(f"Hipoteza mi > 1.5 dla istotności alpha = {alpha}")
+    plt.grid()
+    plt.legend(loc='upper right', fontsize='small')
+    plt.show()
+
     # Przypadek C: mi < 1.5 (Lewostronny)
-    z_crit_left = stats.norm.ppf(alpha)
-    p_left = stats.norm.cdf(z_score)
-    print(f"Hipoteza mi < 1.5:  Obszar krytyczny = (-inf, {z_crit_left:.4f}) | p-wartość = {p_left:.6f}")
+for alpha in [0.01, 0.05, 0.10]:
+    plt.figure(figsize=(10,10))
+    print(f"--- DLA POZIOMU ISTOTNOŚCI alpha = {alpha} ---")
+    # Przypadek A: mi != 1.5 (Dwustronny)
+    mu = 1.5
+    sigma = 0.2
+    rozkład = stats.norm(0, 1)
+    x = np.linspace(-4, 4, 500)
+    y = rozkład.pdf(x) #gęstośc prawdopodbieństwa
+    
+    #wyznaczenie wartosci krytycznych z dwoch stron czyli alpha
+    granica_lewa = rozkład.ppf(alpha)
+    print(f'granica lewostronna {granica_lewa}')
+    
+    plt.plot(x, y, label="rozkład normalny z parametrami N(0,1)")
 
-x = np.linspace(-8, 4, 1000)
-y = stats.norm.pdf(x, 0, 1)
-z_crit_5 = stats.norm.ppf(1 - 0.1/2)
-z_crit_r5 = stats.norm.ppf(1 - 0.1)
-
-# Wykres 1: Dwustronny
-plt.figure(figsize=(8, 4))
-plt.plot(x, y, color='blue', label='Gęstość N(0,1)')
-plt.fill_between(x, y, where=(x > z_crit_5) | (x < -z_crit_5), color='red', alpha=0.5, label='Obszar krytyczny')
-plt.axvline(z_score, color='green', linestyle='--', label=f'Nasze Z = {z_score:.2f}')
-plt.title('Test dwustronny (mi != 1.5) dla alpha=0.1')
-plt.legend()
-plt.grid(True)
-
-# Wykres 2: Prawostronny
-plt.figure(figsize=(8, 4))
-plt.plot(x, y, color='blue', label='Gęstość N(0,1)')
-plt.fill_between(x, y, where=(x > z_crit_r5), color='red', alpha=0.5, label='Obszar krytyczny')
-plt.axvline(z_score, color='green', linestyle='--', label=f'Nasze Z = {z_score:.2f}')
-plt.title('Test prawostronny (mi > 1.5) dla alpha=0.05')
-plt.legend()
-plt.grid(True)
-
-# Wykres 3: Lewostronny
-plt.figure(figsize=(8, 4))
-plt.plot(x, y, color='blue', label='Gęstość N(0,1)')
-plt.fill_between(x, y, where=(x < -z_crit_r5), color='red', alpha=0.5, label='Obszar krytyczny')
-plt.axvline(z_score, color='green', linestyle='--', label=f'Nasze Z = {z_score:.2f}')
-plt.title('Test lewostronny (mi < 1.5) dla alpha=0.05')
-plt.legend()
-plt.grid(True)
-
-plt.show()
-"""
+    x_lewy = np.linspace(-4, granica_lewa, 100)
+    plt.fill_between(x_lewy, rozkład.pdf(x_lewy), color='magenta', label='Obszar krytyczny lewostronny')
+    
+    plt.title(f"Hipoteza mi < 1.5 dla istotności alpha = {alpha}")
+    plt.grid()
+    plt.legend(loc='upper right', fontsize='small')
+    plt.show()

@@ -30,20 +30,32 @@
 		
 		Gdzie:
 		\begin{itemize}
-			\item $\bar{X}$ -- średnia z danych,
+			\item $\bar{X}$ -- średnia z danych (wyliczona z pakietu numpy dla naszych danych wynosi $\approx 1.45546$),
 			\item $\mu_0 = 1.5$ -- wartość z hipotezy zerowej,
 			\item $\sigma = 0.2$ -- sztywna wartość z treści zadania,
-			\item $n$ -- liczba elementów.
+			\item $n$ -- liczba elementów (w naszym przypadku 1000).
 		\end{itemize}
+				
+		\begin{equation*}
+			SE = \frac{\sigma}{\sqrt{n}}
+		\end{equation*}
+		
+		Obliczamy więc, że
+		\begin{equation*}
+			Z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}} = \frac{1.45546 - 1.5}{0.2/ \sqrt{1000}} \approx \frac{-0.04}{0,00632} \approx -7.04
+		\end{equation*}
+			\begin{equation*}
+			SE = \frac{\sigma}{\sqrt{n}} = \frac{0.2}{\sqrt{1000}} \approx 0.0063
+		\end{equation*}
 		
 		Dla naszych danych $Z \approx -7.04$ co stanowi bardzo rzadki wynik. Obliczyliśmy również błąd standardowy (który jest mianownikiem równania powyżej), z którego wychodzi nam $SE = 0.0063$. Wynik taki wyszedł między innymi dlatego, że nasza średnia z próby $\bar{X} = 1.455$. Jest to wynik mniejszy niż nasz oczekiwany (1.5). Nasza próba jest też bardzo duża, bo stanowi 1000 elementów.  Przy tak gigantycznej próbie, nawet mała różnica od zakładanej średniej staje się znacząca. Taki wynik oznacza, że nasza próba jest bardzo czuła i precyzyjna. \\
 		
 		Kolejnym krokiem będzie określenie obszaru krytycznego dla każdego przypadku. Jeśli hipoteza zerowa mówi o tym, że coś jest różne, to obszar krytyczny jest dwustronny i zaznaczamy zarówno prawą jak i lewą końcówkę rozkładu. Jeśli hipoteza alternatywna jest sformułowana jako mniejsze lub większe, to zaznaczamy obszar odrzuceń albo z prawej albo z lewej strony.\\
 		
-		Następnie dla każdej hipotezy alternatywnej obliczymy p-value, czyli wartość p. Jest to prawdopodobieństwo otrzymania wyników równie skrajnych lub jeszcze bardziej skrajnych niż uzyskane w badaniu, przy założeniu że hipoteza zerowa jest prawdziwa. Jest TO alternatywny sposób podejmowania decyzjji w testowaniu hipotez.
+		Następnie dla każdej hipotezy alternatywnej obliczymy p-value, czyli wartość p. Jest to prawdopodobieństwo otrzymania wyników równie skrajnych lub jeszcze bardziej skrajnych niż uzyskane w badaniu, przy założeniu że hipoteza zerowa jest prawdziwa. Kolokwialnie mówiąc, jest to "wielkość naszego ogona", ktorego widać na wykresie. Jest TO alternatywny sposób podejmowania decyzjji w testowaniu hipotez.
 		Decyzja na podstawie wartości p jest podejmowana przez porównanie wartości p z poziomem istotności $\alpha$. Jeśli p value $\leq \alpha $ odrzucamy hipoteze zerową. Wartość p można interpretować jako najmnijeszy poziom istotności, przy którym moglibysmy odrzucić $H_0$. \\
 		
-		Zacznijmy od przeanalizowania hipotezy alternatynej [$H_1$: $\mu \neq 1.5$]. Hipoteza alternatywna stwierdza, że badany paramtr rózni się od wartości określonej w hipotezie zerowej. W tym przypadku obszar krytyczny znajduje się w obu ogonach rozkładu statystyki testowej. Odrzucamy $H_0$ jeśli wartość statystyki testowej jest ekstremalnie duża lub ekstremalnie mała.
+		Zacznijmy od przeanalizowania hipotezy alternatynej [$H_1$: $\mu \neq 1.5$]. Hipoteza alternatywna stwierdza, że badany paramtr rózni się od wartości określonej w hipotezie zerowej. W tym przypadku obszar krytyczny znajduje się w obu ogonach rozkładu statystyki testowej. Odrzucamy $H_0$ jeśli wartość statystyki testowej jest ekstremalnie duża lub ekstremalnie mała. W tym przypadku granica lewostronna była liczona do poziomu $\alpha/2$, a prawostronna $1 - \alpha/2$
 	\
 		\begin{figure}[H]
 			\centering
@@ -56,7 +68,42 @@
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.8\textwidth]{Figure_3.png} 
-		\end{figure}		
+		\end{figure}
+	\begin{itemize}
+		W tym przypadku granice były równe kolejno dla poziomu istotności:
+		\item  $\alpha$ = 0.01 \\
+		granica lewostronna -2.57, granica prawostronna 2.57
+		\item $\alpha$ = 0.05 \\
+		granica lewostronna -1.95, granica prawostronna 1.95
+		\item $\alpha$ = 0.1 \\
+		granica lewostronna -1.64, granica prawostronna 1.64
+	\end{itemize}
 		
+		Kolejną hipotezą alternatywną jest hipoteza	[$H_1$: $\mu > 1.5$]. Hipoteza alterntywna stwierdza, że badany parametr jest większy niż wartość określona w hipotezie zerowej. Obszar krytyczny znajduje się tylko w prawym ogonie rozkładu. Odrzucamy $H_0$, jeśli wartość statystyki testowej jest ekstremalnie duża. 
+				\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_4.png} 
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_5.png} 
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_6.png} 
+		\end{figure}
+		Ostatnią hipoteza alternatywną, którą bedziemy analizować jest hipoteza [$H_1$: $\mu < 1.5$]. Hipoteza ta stwierdza, że badany parametr jest mniejszy niż wartość okreslona w hipotezie zerowej. Obszar krytyczny znajduje się tylko w lewym ogonie rozkładu. Odrzucamy $H_0$ jeśli wartość statystyki tesotwej jest ekstremalnie mała.
+				\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_7.png} 
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_8.png} 
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_9.png} 
+		\end{figure}
 
 \end{document}
