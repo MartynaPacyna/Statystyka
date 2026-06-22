@@ -10,16 +10,16 @@
 \usepackage{graphicx}
 \usepackage{textgreek}
 \usepackage{float}
+\usepackage{subcaption}
 
 
 \begin{document}
 	
 	\begin{center}
-		\Huge \textbf{Analiza porównawcza wpływu kursu przygotowawczego na wyniki } \\[0.5em]
-		\large Sprawozdanie 1 \\[1.5em]
+		\Huge \textbf{Testowanie hipotez statystycznych } \\[0.5em]
+		\large Sprawozdanie 2 \\[1.5em]
 		\Large Martyna Pacyna 287440 \\ Lena Rojecka 287460
 	\end{center}
-	
 	
 	\section{Wstęp}
 	\section{Testowanie hipotezy dotyczącej średniej}
@@ -223,4 +223,289 @@
 		
 		Interpretacja: Zdolność testu do wykrycia fałszywości hipotezy zerowej drastycznie rośnie, gdy rzeczywista średnia oddala się od wartości hipotetycznej. Dla punktów skrajnych, takich jak $1.47$ i $1.53$, moc testu osiąga niemal maksymalną wartość równą $1$ (lub $0.999$), co oznacza, że przy próbie wielkości $n = 1000$ test jest perfekcyjnie czuły i wykryje nawet tak małe przesunięcia średniej. Największą trudność test ma z identyfikacją wartości położonych najbliżej centrum ($1.49$ i $1.51$), wykazując niską skuteczność detekcji. Porównując wyniki dla tych samych punktów (np. dla $\mu = 1.49$ oraz $\mu = 1.51$), można zauważyć przewagę testów jednostronnych nad testem dwustronnym. Dla $\mu = 1.49$ test dwustronny ma moc wynoszącą tylko $0.362$, podczas gdy dedykowany test lewostronny osiąga moc $0.435$. Z kolei dla $\mu = 1.51$ test prawostronny wykazuje moc $0.451$ w porównaniu do $0.351$ dla testu dwustronnego.
 		
+	\section{Testowanie hipotezy dotyczącej wariancji}	
+	\subsection{Testowanie hipotezy dotyczącej wariancji dla $\alpha =0.05$}	
+		Wykorzystano udostępnione dane i przeprowadzono testowanie hipotezy zerowej $H_0:\sigma^2=1.5$ przeciwko trzem hipotezom alternatywnym: $H_1:\sigma^2\neq1.5$, $H_1:\sigma^2>1.5$, $H_1:\sigma^2<1.5$ dla poziomu istotności $\alpha =0.05$. Dla rozkładu normalnego, do testów wariancji użyto statystyki chi-kwadrat.\\
+		\[
+		\begin{aligned}
+			\chi^2_{obl} &= \frac{\sum_{i=1}^{n}(x_i-\mu)^2}{\sigma_0^2} \\
+			n &\text{ - liczebność próby} \\
+			x_i &\text{ - } i\text{-ta obserwacja w próbie} \\
+			\mu &\text{ - znana wartość średniej populacji } \\
+			\sigma_0^2 &\text{ - hipotetyczna wariancja populacji} \\
+		\end{aligned}
+		\]
+		
+		Zebrano dane:
+		\[
+		\begin{aligned}
+			n&=1000\\
+			\sigma_0^2&=1,5\\
+			\mu&=0.2\\
+		\end{aligned}
+		\]
+		
+		Wyznaczono wartość statystki testowej.\\
+		\[
+		\begin{aligned}
+			\chi^2_{obl}
+			&= \frac{\sum_{i=1}^{n}(x_i-\mu)^2}{\sigma_0^2}\\
+			&= \frac{\sum_{i=1}^{1000}(x_i-0.2)^2}{1.5}\\
+			&= 1112.579914
+		\end{aligned}
+		\]
+		
+		Określono obszary krytyczne dla poziomu istotności $\alpha =0.05$ oraz liczbie stopni swobody $n=1000$.\\
+		Dla $H_0:\sigma^2=1.5, H_1:\sigma^2\neq1.5$:\\
+		\begin{align*}
+			C &= \left(0, \chi^2_{\alpha/2, n}\right\rangle \cup \left\langle \chi^2_{1-\alpha/2, n}, +\infty\right) \\
+			&= \left(0, \chi^2_{0.025, 1000}\right\rangle \cup \left\langle \chi^2_{0.975, 1000}, +\infty\right) \\
+			&= \left(0; 914.257153\right\rangle \cup \left\langle 1089.530912; +\infty\right).
+		\end{align*}
+		Dla $H_0:\sigma^2=1.5, H_1:\sigma^2>1.5$:\\
+		\begin{align*}
+			C &= \left\langle \chi^2_{1-\alpha, n}, +\infty\right) \\
+			&= \left\langle \chi^2_{0.95, 1000}, +\infty\right) \\
+			&= \left\langle 1074.679448; +\infty\right).
+		\end{align*}
+		Dla $H_0:\sigma^2=1.5, H_1:\sigma^2<1.5$:\\
+		\begin{align*}
+			C &= \left(0, \chi^2_{\alpha, n}\right\rangle \\
+			&= \left(0, \chi^2_{0.05, 1000}\right\rangle \\
+			&= \left(0; 927.594363\right\rangle.
+		\end{align*}
+		
+		Przedstawiono obszary krytyczne graficznie, wykorzystując gęstość rozkładu $\chi^2$.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{c1.png} 
+	\caption{Graficzna interpretacja obszarów krytycznych dla $H_1: \sigma^2 \neq 1.5$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{c2.png} 
+	\caption{Graficzna interpretacja obszarów krytycznych dla $H_1: \sigma^2 > 1.5$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{c3.png} 
+	\caption{Graficzna interpretacja obszarów krytycznych dla $H_1: \sigma^2 < 1.5$}
+\end{figure}
+		Wyznaczono p-wartości.\\
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 \neq 1.5$:
+	\begin{align*}
+		p &= 2 \cdot \min \left[ P(\chi^2 \le \chi^2_{obl}), \, P(\chi^2 \ge \chi^2_{obl}) \right] \\
+		&= 2 \cdot P(\chi^2 \ge 1112.579914) \\
+		&= 2 \cdot 0.007274\\
+		&= 0.014548.
+	\end{align*}
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 > 1.5$:
+	\begin{align*}
+		p &= P(\chi^2 \ge \chi^2_{obl}) \\
+		&= P(\chi^2 \ge 1112.579914) \\
+		&=0.007274.
+	\end{align*}
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 < 1.5$:
+	\begin{align*}
+		p &= P(\chi^2 \le \chi^2_{obl}) \\
+		&= P(\chi^2 \le 1112.579914) \\
+		&= 0.992726.
+	\end{align*}
+		
+		Sformułowano decyzje dotyczące hipotezy zerowej.\\
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 \neq 1.5$:\\
+	Uzyskana $p$-wartość oznacza, że przy założeniu prawdziwości hipotezy zerowej (gdy wariancja populacji wynosi dokładnie $1.5$), prawdopodobieństwo zaobserwowania w próbie wyniku tak skrajnego wynosi zaledwie $1.45\%$. Ponieważ szansa na to, że za tak duże odchylenie odpowiada czysty przypadek, jest mniejsza od przyjętego progu $5\%$ ($0.014548 \le 0.05$), hipotezę zerową należy odrzucić. Decyzję tę potwierdza również fakt, że obliczona statystyka testowa $\chi^2_{obl} = 1112.579914$ przekracza prawą wartość krytyczną ($1089.530912$) i znajduje się wewnątrz obszaru krytycznego. Zatem na poziomie istotności $\alpha = 0.05$ odrzucono hipotezę zerową $H_0$ na rzecz hipotezy alternatywnej $H_1$. Dane empiryczne wskazują, że wariancja w populacji jest istotnie różna od $1.5$. \\
+	
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 > 1.5$:\\
+	 Uzyskana $p$-wartość oznacza, że przy założeniu prawdziwości hipotezy zerowej (gdy wariancja populacji wynosi dokładnie $1.5$), prawdopodobieństwo zaobserwowania w próbie wyniku tak skrajnego wynosi zaledwie $0.73\%$. Ponieważ szansa na to, że za tak duże odchylenie odpowiada czysty przypadek, jest mniejsza od przyjętego progu $5\%$ ($0.007274 \le 0.05$), hipotezę zerową należy odrzucić. Decyzję tę potwierdza również fakt, że obliczona statystyka testowa $\chi^2_{obl} = 1112.579914$ przekracza wartość krytyczną ($1074.679448$) i znajduje się wewnątrz obszaru krytycznego. Zatem na poziomie istotności $\alpha = 0.05$ odrzucono hipotezę zerową $H_0$ na rzecz hipotezy alternatywnej $H_1$. Dane empiryczne wskazują, że wariancja w populacji jest istotnie większa od $1.5$.\\
+	 
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 < 1.5$:\\
+	Uzyskana $p$-wartość na poziomie ponad $99.27\%$ ($0.992726 > 0.05$) wskazuje, że przy założeniu prawdziwości hipotezy zerowej, prawdopodobieństwo na zaobserwowanie w próbie takiego wyniku wynosi $99.27\%$ i przewyższa przyjęty próg $5\%$. Brak podstaw do odrzucenia $H_0$ potwierdza również to, że statystyka $\chi^2_{obl} = 1112.579914$ nie należy do obszaru krytycznego. Zatem na poziomie istotności $\alpha = 0.05$ nie ma podstaw do odrzucenia hipotezy zerowej $H_0$. Dane empiryczne nie pozwalają stwierdzić, czy wariancja w populacji jest mniejsza od $1.5$.\\
+	
+	\subsection{Testowanie hipotezy dotyczącej wariancji dla $\alpha =0.01$}	
+	Aby przeanalizować wpływ zmiany poziomu istotności na wyniki testu rozważono jeszcze $\alpha =0.01$ oraz $\alpha =0.10$. Najpierw przypadek $\alpha =0.01$. Statystyka testowa pozostaje bez zmian.\\
+	\[
+	\begin{aligned}
+		\chi^2_{obl}
+		&= \frac{\sum_{i=1}^{n}(x_i-\mu)^2}{\sigma_0^2}= 1112.579914
+	\end{aligned}
+	\]
+	Określono obszary krytyczne dla poziomu istotności $\alpha =0.01$ oraz liczbie stopni swobody $n=1000$.\\
+	Dla $H_0:\sigma^2=1.5, H_1:\sigma^2\neq1.5$:\\
+	\begin{align*}
+		C &= \left(0, \chi^2_{\alpha/2, n}\right\rangle \cup \left\langle \chi^2_{1-\alpha/2, n}, +\infty\right) \\
+		&= \left(0, \chi^2_{0.005, 1000}\right\rangle \cup \left\langle \chi^2_{0.995, 1000}, +\infty\right) \\
+		&= \left(0; 888.563523\right\rangle \cup \left\langle 1118.948066; +\infty\right).
+	\end{align*}
+	Dla $H_0:\sigma^2=1.5, H_1:\sigma^2>1.5$:\\
+	\begin{align*}
+		C &= \left\langle \chi^2_{1-\alpha, n}, +\infty\right) \\
+		&= \left\langle \chi^2_{0.99, 1000}, +\infty\right) \\
+		&= \left\langle 1106.968994; +\infty\right).
+	\end{align*}
+	Dla $H_0:\sigma^2=1.5, H_1:\sigma^2<1.5$:\\
+	\begin{align*}
+		C &= \left(0, \chi^2_{\alpha, n}\right\rangle \\
+		&= \left(0, \chi^2_{0.01, 1000}\right\rangle \\
+		&= \left(0;898.912446\right\rangle.
+	\end{align*}
+	
+	Przedstawiono obszary krytyczne graficznie, wykorzystując gęstość rozkładu $\chi^2$.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{v1.png} 
+	\caption{Graficzna interpretacja obszarów krytycznych dla $H_1: \sigma^2 \neq 1.5$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{v2.png} 
+	\caption{Graficzna interpretacja obszarów krytycznych dla $H_1: \sigma^2 > 1.5$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{v3.png} 
+	\caption{Graficzna interpretacja obszarów krytycznych dla $H_1: \sigma^2 < 1.5$}
+\end{figure}
+			P-wartości pozostają bez zmian.\\
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 \neq 1.5$:
+	\begin{align*}
+		p = 2 \cdot \min \left[ P(\chi^2 \le \chi^2_{obl}), \, P(\chi^2 \ge \chi^2_{obl}) \right] = 0.014548.
+	\end{align*}
+	
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 > 1.5$:
+	\begin{align*}
+		p = P(\chi^2 \ge \chi^2_{obl}) = 0.007274.
+	\end{align*}
+	
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 < 1.5$:
+	\begin{align*}
+		p = P(\chi^2 \le \chi^2_{obl}) = 0.992726.
+	\end{align*}
+	
+	Sformułowano decyzje dotyczące hipotezy zerowej.\\
+	\noindent Dla $H_0 : \sigma^2 = 1.5, \quad H_1 : \sigma^2 \neq 1.5$: \\
+		Uzyskana $p$-wartość na poziomie  $1.45\%$ ($0.014548 > 0.01$) wskazuje, że przy założeniu prawdziwości hipotezy zerowej, prawdopodobieństwo na zaobserwowanie w próbie takiego wyniku wynosi $1.45\%$ i przewyższa przyjęty próg $1\%$. Brak podstaw do odrzucenia $H_0$ potwierdza również to, że statystyka $\chi^2_{obl} = 1112.579914$ nie należy do obszaru krytycznego. Zatem na poziomie istotności $\alpha = 0.01$ nie ma podstaw do odrzucenia hipotezy zerowej $H_0$. Dane empiryczne nie pozwalają stwierdzić, czy wariancja w populacji jest różna od $1.5$.\\
+		
+	\noindent Dla $H_0 : \sigma^2 = 1.5, \quad H_1 : \sigma^2 > 1.5$: \\
+		 Uzyskana $p$-wartość oznacza, że przy założeniu prawdziwości hipotezy zerowej (gdy wariancja populacji wynosi dokładnie $1.5$), prawdopodobieństwo zaobserwowania w próbie wyniku tak skrajnego wynosi $0.73\%$. Ponieważ szansa na to, że za tak duże odchylenie odpowiada czysty przypadek, jest mniejsza od przyjętego progu $1\%$ ($0.007274 \le 0.01$), hipotezę zerową należy odrzucić. Decyzję tę potwierdza również fakt, że obliczona statystyka testowa $\chi^2_{obl} = 1112.579914$ przekracza wartość krytyczną ($1106.968994$) i znajduje się wewnątrz obszaru krytycznego. Zatem na poziomie istotności $\alpha = 0.01$ odrzucono hipotezę zerową $H_0$ na rzecz hipotezy alternatywnej $H_1$. Dane empiryczne wskazują, że wariancja w populacji jest istotnie większa od $1.5$.\\
+		 
+	\noindent Dla $H_0 : \sigma^2 = 1.5, \quad H_1 : \sigma^2 < 1.5$: \\
+		Uzyskana $p$-wartość na poziomie ponad $99.27\%$ ($0.992726 > 0.01$) wskazuje, że przy założeniu prawdziwości hipotezy zerowej, prawdopodobieństwo na zaobserwowanie w próbie takiego wyniku wynosi $99.27\%$ i przewyższa przyjęty próg $1\%$. Brak podstaw do odrzucenia $H_0$ potwierdza również to, że statystyka $\chi^2_{obl} = 1112.579914$ nie należy do obszaru krytycznego. Zatem na poziomie istotności $\alpha = 0.01$ nie ma podstaw do odrzucenia hipotezy zerowej $H_0$. Dane empiryczne nie pozwalają stwierdzić, czy wariancja w populacji jest mniejsza od $1.5$.\\
+	
+	
+	\subsection{Testowanie hipotezy dotyczącej wariancji dla $\alpha =0.10$}	
+	Przypadek $\alpha =0.10$. Statystyka testowa pozostaje bez zmian.\\
+	\[
+	\begin{aligned}
+		\chi^2_{obl}
+		&= \frac{\sum_{i=1}^{n}(x_i-\mu)^2}{\sigma_0^2}= 1112.579914
+	\end{aligned}
+	\]
+	
+		Określono obszary krytyczne dla poziomu istotności $\alpha =0.10$ oraz liczbie stopni swobody $n=1000$.\\
+	Dla $H_0:\sigma^2=1.5, H_1:\sigma^2\neq1.5$:\\
+	\begin{align*}
+		C &= \left(0, \chi^2_{\alpha/2, n}\right\rangle \cup \left\langle \chi^2_{1-\alpha/2, n}, +\infty\right) \\
+		&= \left(0, \chi^2_{0.05, 1000}\right\rangle \cup \left\langle \chi^2_{0.95, 1000}, +\infty\right) \\
+		&= \left(0; 927.594363\right\rangle \cup \left\langle 1074.679448; +\infty\right).
+	\end{align*}
+	Dla $H_0:\sigma^2=1.5, H_1:\sigma^2>1.5$:\\
+	\begin{align*}
+		C &= \left\langle \chi^2_{1-\alpha, n}, +\infty\right) \\
+		&= \left\langle \chi^2_{0.90, 1000}, +\infty\right) \\
+		&= \left\langle 1057.723901; +\infty\right).
+	\end{align*}
+	Dla $H_0:\sigma^2=1.5, H_1:\sigma^2<1.5$:\\
+	\begin{align*}
+		C &= \left(0, \chi^2_{\alpha, n}\right\rangle \\
+		&= \left(0, \chi^2_{0.10, 1000}\right\rangle \\
+		&= \left(0;943.132562\right\rangle.
+	\end{align*}
+	
+	Przedstawiono obszary krytyczne graficznie, wykorzystując gęstość rozkładu $\chi^2$.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{b1.png} 
+	\caption{Graficzna interpretacja obszarów krytycznych dla $H_1: \sigma^2 \neq 1.5$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{b2.png} 
+	\caption{Graficzna interpretacja obszarów krytycznych dla $H_1: \sigma^2 > 1.5$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{b3.png} 
+	\caption{Graficzna interpretacja obszarów krytycznych dla $H_1: \sigma^2 < 1.5$}
+\end{figure}
+				P-wartości pozostają bez zmian.\\
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 \neq 1.5$:
+	\begin{align*}
+		p = 2 \cdot \min \left[ P(\chi^2 \le \chi^2_{obl}), \, P(\chi^2 \ge \chi^2_{obl}) \right] = 0.014548.
+	\end{align*}
+	
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 > 1.5$:
+	\begin{align*}
+		p = P(\chi^2 \ge \chi^2_{obl}) = 0.007274.
+	\end{align*}
+	
+	\noindent Dla $H_0: \sigma^2 = 1.5, \quad H_1: \sigma^2 < 1.5$:
+	\begin{align*}
+		p = P(\chi^2 \le \chi^2_{obl}) = 0.992726.
+	\end{align*}
+	
+	Sformułowano decyzje dotyczące hipotezy zerowej.\\
+	\noindent Dla $H_0 : \sigma^2 = 1.5, \quad H_1 : \sigma^2 \neq 1.5$: \\
+		Uzyskana $p$-wartość oznacza, że przy założeniu prawdziwości hipotezy zerowej (gdy wariancja populacji wynosi dokładnie $1.5$), prawdopodobieństwo zaobserwowania w próbie wyniku tak skrajnego wynosi zaledwie $1.45\%$. Ponieważ szansa na to, że za tak duże odchylenie odpowiada czysty przypadek, jest mniejsza od przyjętego progu $10\%$ ($0.014548 \le 0.10$), hipotezę zerową należy odrzucić. Decyzję tę potwierdza również fakt, że obliczona statystyka testowa $\chi^2_{obl} = 1112.579914$ przekracza prawą wartość krytyczną ($1074.679448$) i znajduje się wewnątrz obszaru krytycznego. Zatem na poziomie istotności $\alpha = 0.10$ odrzucono hipotezę zerową $H_0$ na rzecz hipotezy alternatywnej $H_1$. Dane empiryczne wskazują, że wariancja w populacji jest istotnie różna od $1.5$. \\
+		
+	\noindent Dla $H_0 : \sigma^2 = 1.5, \quad H_1 : \sigma^2 > 1.5$: \\
+			 Uzyskana $p$-wartość oznacza, że przy założeniu prawdziwości hipotezy zerowej (gdy wariancja populacji wynosi dokładnie $1.5$), prawdopodobieństwo zaobserwowania w próbie wyniku tak skrajnego wynosi $0.73\%$. Ponieważ szansa na to, że za tak duże odchylenie odpowiada czysty przypadek, jest mniejsza od przyjętego progu $10\%$ ($0.007274 \le 0.10$), hipotezę zerową należy odrzucić. Decyzję tę potwierdza również fakt, że obliczona statystyka testowa $\chi^2_{obl} = 1112.579914$ przekracza wartość krytyczną ($1057.723901$) i znajduje się wewnątrz obszaru krytycznego. Zatem na poziomie istotności $\alpha = 0.10$ odrzucono hipotezę zerową $H_0$ na rzecz hipotezy alternatywnej $H_1$. Dane empiryczne wskazują, że wariancja w populacji jest istotnie większa od $1.5$.\\
+	
+	\noindent Dla $H_0 : \sigma^2 = 1.5, \quad H_1 : \sigma^2 < 1.5$: \\
+			Uzyskana $p$-wartość na poziomie ponad $99.27\%$ ($0.992726 > 0.10$) wskazuje, że przy założeniu prawdziwości hipotezy zerowej, prawdopodobieństwo na zaobserwowanie w próbie takiego wyniku wynosi $99.27\%$ i przewyższa przyjęty próg $10\%$. Brak podstaw do odrzucenia $H_0$ potwierdza również to, że statystyka $\chi^2_{obl} = 1112.579914$ nie należy do obszaru krytycznego. Zatem na poziomie istotności $\alpha = 0.10$ nie ma podstaw do odrzucenia hipotezy zerowej $H_0$. Dane empiryczne nie pozwalają stwierdzić, czy wariancja w populacji jest mniejsza od $1.5$.\\
+	\subsection{Wpływ zmiany poziomu istotności na obszar krytyczny i decyzję testową}
+		Poziom istotności $\alpha $ to parametr określający prawdopodobieństwo popełnienia błędu odrzucenia prawdziwej hipotezy zerowej. Gdy statystyka będzie w obszarze krytycznym, odrzuca się hipotezę zerową. Zatem na podstawie tego można wywnioskować, że im większe jest prawdopodobieństwo popełnienia błędu, tym bardziej rozszerzają się obszary krytyczne, by to zachodziło. Zatem dla $\alpha = 0.01 $ przedziały są najbardziej zwężone z tych przypadków, a wartości krytyczne przesuwają się w stronę środka rozkładu gdy alfa się zwiększa, co potwierdzają wykresy.
+		
+		W przypadku decyzji testowej możemy wywnioskować, że parametr $\alpha$ może, ale nie musi wpływać na odrzucenie hipotezy zerowej. Dla obu testów jednostronnych zmiana wartości $\alpha$ (w obrębie trzech analizowanych przypadków) nie wpłynęła na zmianę decyzji. Wpływ poziomu istotności na ostateczny werdykt można natomiast zauważyć w przypadku testu dwustronnego. Przyjmując $\alpha=0.05$ jako punkt odniesienia, dla tego warunku odrzucono hipotezę zerową na rzecz hipotezy alternatywnej. Gdy zmniejszono parametr do $\alpha = 0.01$, nastąpił brak podstaw do odrzucenia hipotezy zerowej, natomiast gdy zwiększono go do $\alpha = 0.10$, hipoteza zerowa również została odrzucona. Jest to w pełni logiczne: skoro dla poziomu bazowego $\alpha=0.05$ wartość statystyki testowej znajdowała się w obszarze krytycznym, to gdy przy $\alpha=0.10$ wartości graniczne przesunęły się w stronę środka rozkładu, statystyka tym bardziej pozostała w strefie odrzucenia. Z kolei gdy przy $\alpha=0.01$ wartości krytyczne przesunęły się w przeciwnym kierunku (na zewnątrz rozkładu), wartość statystyki wypadła poza obszar krytyczny.
+
+	\section{Symulacyjne wyznaczenie błędów testowych dla testów dotyczących wariancji }
+		Błąd I rodzaju to prawdopodobieństwo odrzucenia hipotezy zerowej, mimo że jest ona prawdziwa. W teorii powinien być równy poziomowi istotności $\alpha$. Aby sprawdzić to w praktyce, przeprowadzono symulację komputerową, a jej wyniki przedstawiono na wykresach pudełkowych.
+		
+		Wygenerowano próby losowe o wielkości $n = 1000$ z rozkładu normalnego $N(\mu = 0.2, \sigma^2 = 1.5)$, co jest zgodne z hipotezą zerową dla przypadku testów wariancji ($H_0: \sigma^2 = 1.5$). Dla każdej próby wyliczano wartość statystyki testowej $\chi^2$ (dla znanej średniej $\mu$) oraz wyznaczano granice teoretycznych obszarów krytycznych wykorzystując kwantyle rozkładu chi-kwadrat o $n$ stopniach swobody.
+		
+		Weryfikacja polegała na sprawdzeniu, czy statystyka wpada w obszar odrzuceń. Procedurę powtórzono w pętli $N = 1000$ razy, co pozwoliło obliczyć empiryczny błąd I rodzaju jako stosunek liczby odrzuceń $H_0$ do wszystkich prób. Żeby sprawdzić stabilność tych wyników, całą symulację ponowiono $M = 100$ razy dla każdego z trzech poziomów istotności ($\alpha = 0.01, 0.05, 0.10$).
+		
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{pudelko1.png} 
+	\caption{Empiryczny błąd I rodzaju w zależności od poziomu istotności $\alpha$ oraz typu hipotezy alternatywnej.}
+	\label{fig:error_type_i}
+\end{figure}
+		Na podstawie wykresów wyciągnięto wnioski. Empiryczne błędy pierwszego rodzaju w każdym przypadku pokrywają się z teorią. Na błąd nie wpływa również przedział hipotezy $H_1$. Zaobserwowano, że wraz ze wzrostem poziomu istotności $\alpha$ rozrzut wartości na wykresach pudełkowych ulega zwiększeniu, co wynika z faktu, że przy większej skali prawdopodobieństwa błędu różnice między seriami stają się bardziej wyraźne.
+	
+	Wyznaczono symulacyjnie błąd drugiego rodzaju i moc testu. Przeprowadzono symulację testów wariancji, w której dla określonych wartości parametrów wyznaczono empiryczny błąd drugiego rodzaju oraz moc testu. Generowano wielokrotnie próby losowe z rozkładu normalnego przy założonych wariancjach alternatywnych. Zastosowano następujące parametry: liczebność próby $n = 1000$, liczbę powtórzeń dla każdego przypadku $N = 1000$, poziom istotności $\alpha = 0.05$ oraz wartość średnią $\mu = 0.2$ przy hipotezie zerowej zakładającej wariancję $\sigma_0^2 = 1.5$. Dla każdej próby obliczano statystykę testową, porównując ją następnie z wyznaczonymi granicami krytycznymi. W przypadku nieodrzucenia hipotezy zerowej mimo jej fałszywości, sytuację rejestrowano jako błąd drugiego rodzaju. Na podstawie zebranych wyników obliczono prawdopodobieństwo wystąpienia tego błędu oraz odpowiadającą mu moc testu.
+		\begin{table}[H]
+			\centering
+			\caption{Wartości empirycznego błędu II rodzaju $\beta$ oraz mocy testu $1-\beta$.}
+			\label{tab:beta_and_power}
+			\begin{tabular}{|c|c|c|c|c|c|c|}
+				\hline
+				$\sigma^2_{alt}$ & $\beta$ & $1-\beta$ & $\beta$ & $1-\beta$ & $\beta$ & $1-\beta$ \\ \hline
+				& \multicolumn{2}{c|}{$H_1: \sigma^2 \neq 1.5$} & \multicolumn{2}{c|}{$H_1: \sigma^2 < 1.5$} & \multicolumn{2}{c|}{$H_1: \sigma^2 > 1.5$} \\ \hline
+				1.47 & 0.938 & 0.062 & 0.889 & 0.111 & --- & --- \\ \hline
+				1.48 & 0.948 & 0.052 & 0.907 & 0.093 & --- & --- \\ \hline
+				1.49 & 0.950 & 0.050 & 0.943 & 0.057 & --- & --- \\ \hline
+				1.51 & 0.938 & 0.062 & --- & --- & 0.924 & 0.076 \\ \hline
+				1.52 & 0.940 & 0.060 & --- & --- & 0.913 & 0.087 \\ \hline
+				1.53 & 0.933 & 0.067 & --- & --- & 0.882 & 0.118 \\ \hline
+			\end{tabular}
+		\end{table}
+	Analiza wskazuje, że przy niewielkich różnicach między wariancją rzeczywistą a założoną, testy statystyczne często zawodzą, nie odrzucając fałszywej hipotezy zerowej. Jeśli rzeczywista wariancja tylko nieznacznie różni się od założonej, test często nie odrzuca hipotezy zerowej. Skuteczność zauważenia błędu rośnie gdy ta różnica robi się coraz większa.
+
 \end{document}
