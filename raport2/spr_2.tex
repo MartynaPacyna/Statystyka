@@ -21,8 +21,209 @@
 		\Large Martyna Pacyna 287440 \\ Lena Rojecka 287460
 	\end{center}
 	
-	
+	\section{Wstęp}
+		Celem sprawozdania jest weryfikacja metod testowania hipotez statystycznych dotyczących średniej i wariancji. W pracy przeprowadzono symulacje komputerowe, których zadaniem było wyznaczenie wartości statystyk testowych, obszarów krytycznych oraz p-wartości. Analiza obejmuje ocenę skuteczności testów poprzez badanie błędów I i II rodzaju oraz wyznaczenie mocy testów.
+	\section{Testowanie hipotezy dotyczącej średniej}
+		W tym zadaniu należało wykorzystać dane przekazane przez prowadzącą, aby przeprowadzić testowanie hipotezy zerowej H0 : $\mu = 1.5$ przeciwko trzem hipotezom alternatywnym. Najpierw wyznaczymy wartość statystyki testowej. To taka funkcja próby, na podstawie której wnioskuje się o odrzuceniu lub nie hipotezy statystycznej. Pierwsze porównanie przeprowadzimy przez wyznaczenie hipotezy testowej. Uzyjemy statystyki testowej Z, ponieważ mamy do czynienia z próbami o rozkładzie normalnym, o dużej wielkości oraz ze znanym odchyleniem standardowym. Wyliczamy go z poniższego wzoru: 
+		\begin{equation*}
+			Z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}}
+		\end{equation*}
 		
+		Gdzie:
+		\begin{itemize}
+			\item $\bar{X}$ -- średnia z danych (wyliczona z pakietu numpy dla naszych danych wynosi $\approx 1.45546$),
+			\item $\mu_0 = 1.5$ -- wartość z hipotezy zerowej,
+			\item $\sigma = 0.2$ -- sztywna wartość z treści zadania,
+			\item $n$ -- liczba elementów (w naszym przypadku 1000).
+		\end{itemize}
+				
+		\begin{equation*}
+			SE = \frac{\sigma}{\sqrt{n}}
+		\end{equation*}
+		
+		Obliczamy więc, że
+		\begin{equation*}
+			Z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}} = \frac{1.45546 - 1.5}{0.2/ \sqrt{1000}} \approx \frac{-0.04}{0,00632} \approx -7.04
+		\end{equation*}
+			\begin{equation*}
+			SE = \frac{\sigma}{\sqrt{n}} = \frac{0.2}{\sqrt{1000}} \approx 0.0063
+		\end{equation*}
+		
+		Dla naszych danych $Z \approx -7.04$ co stanowi bardzo rzadki wynik. Obliczyliśmy również błąd standardowy (który jest mianownikiem równania powyżej), z którego wychodzi nam $SE = 0.0063$. Wynik taki wyszedł między innymi dlatego, że nasza średnia z próby $\bar{X} = 1.455$. Jest to wynik mniejszy niż nasz oczekiwany (1.5). Nasza próba jest też bardzo duża, bo stanowi 1000 elementów.  Przy tak gigantycznej próbie, nawet mała różnica od zakładanej średniej staje się znacząca. Taki wynik oznacza, że nasza próba jest bardzo czuła i precyzyjna. \\
+		
+		Kolejnym krokiem będzie określenie obszaru krytycznego dla każdego przypadku. Jeśli hipoteza zerowa mówi o tym, że coś jest różne, to obszar krytyczny jest dwustronny i zaznaczamy zarówno prawą jak i lewą końcówkę rozkładu. Jeśli hipoteza alternatywna jest sformułowana jako mniejsze lub większe, to zaznaczamy obszar odrzuceń albo z prawej albo z lewej strony.\\
+		
+		Następnie dla każdej hipotezy alternatywnej obliczymy p-value, czyli wartość p. Jest to prawdopodobieństwo otrzymania wyników równie skrajnych lub jeszcze bardziej skrajnych niż uzyskane w badaniu, przy założeniu że hipoteza zerowa jest prawdziwa. Kolokwialnie mówiąc, jest to "wielkość naszego ogona", ktorego widać na wykresie. Jest TO alternatywny sposób podejmowania decyzjji w testowaniu hipotez.
+		Decyzja na podstawie wartości p jest podejmowana przez porównanie wartości p z poziomem istotności $\alpha$. Jeśli p value $\leq \alpha $ odrzucamy hipoteze zerową. Wartość p można interpretować jako najmnijeszy poziom istotności, przy którym moglibysmy odrzucić $H_0$. \\
+		
+		Zacznijmy od przeanalizowania hipotezy alternatynej [$H_1$: $\mu \neq 1.5$]. Hipoteza alternatywna stwierdza, że badany paramtr rózni się od wartości określonej w hipotezie zerowej. W tym przypadku obszar krytyczny znajduje się w obu ogonach rozkładu statystyki testowej. Odrzucamy $H_0$ jeśli wartość statystyki testowej jest ekstremalnie duża lub ekstremalnie mała. W tym przypadku granica lewostronna była liczona do poziomu $\alpha/2$, a prawostronna $1 - \alpha/2$ za pomocą funcji ppf wbudowanej w pythonie. 
+	\
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_1.png} 
+		\end{figure}
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{Figure_2.png} 
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_3.png} 
+		\end{figure}
+		W tym przypadku granice były równe kolejno dla poziomu istotności:
+	\begin{itemize}
+		\item  $\alpha$ = 0.01 \\
+		granica lewostronna -2.57, granica prawostronna 2.57
+		\item $\alpha$ = 0.05 \\
+		granica lewostronna -1.95, granica prawostronna 1.95
+		\item $\alpha$ = 0.1 \\
+		granica lewostronna -1.64, granica prawostronna 1.64
+	\end{itemize}
+		Dla testu dwustronnego, $p$-wartość definiujemy jako $$p = P(|Z| \ge |Z_{\text{obs}}|)$$
+		Wykorzystując własność wartości bezwzględnej, prawdopodobieństwo to rozbija się na sumę dwóch skrajnych ogonów rozkładu, natomiast z racji idealnej symetrii gęstości rozkładu normalnego, możemy zapisać to równanie za pomocą jednego ogona pomnożonego przez dwa. $F(x)$:$$p = 2 \cdot P(Z \le Z_{\text{obs}}) = 2 \cdot F(Z_{\text{obs}})$$. U nas $Z_{\text{obs}} = -7.04$. Podstawiając wartość statystyki testowej do powyższego wzoru, otrzymujemy wyrażenie za pomocą całki gęstości prawdopodobieństwa rozkładu $N(0,1)$:$$p = 2 \cdot \int_{-\infty}^{-7.04} \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}} \, dt$$Wartość dystrybuanty dla tego punktu wynosi:
+		$$F(-7.04) \approx 9.61 \cdot 10^{-13}$$
+		$$p-value = 2 \cdot (9.61 \cdot 10^{-13}) \approx 1.92 \cdot 10^{-12} \approx 0.00000000000192$$ \\
+		
+		Interpretacja:
+		Im większy mamy poziom istotności $\alpha$, tym większe pole ma obszar krytyczny. Wartość p jest bardzo bliska zeru. Oznacza to, że prawie z całą pewnością możemy stwierdzić, że nasza hipoteza alternatywna jest prawdziwa i możemy odrzucić hipotezę zerową.
+		
+		\newpage
+		Kolejną hipotezą alternatywną jest hipoteza	[$H_1$: $\mu > 1.5$]. Hipoteza alterntywna stwierdza, że badany parametr jest większy niż wartość określona w hipotezie zerowej. Obszar krytyczny znajduje się tylko w prawym ogonie rozkładu. Odrzucamy $H_0$, jeśli wartość statystyki testowej jest ekstremalnie duża. 
+				\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_4.png} 
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_5.png} 
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_6.png} 
+		\end{figure}
+		
+		W tym przypadku rozpatrujemy jedynie granice prawostronną. Kolejno dla poziomu istotności:
+		\begin{itemize}
+			\item  $\alpha$ = 0.01 \\
+			granica prawostronna 2.32
+			\item $\alpha$ = 0.05 \\
+			granica prawostronna 1.64
+			\item $\alpha$ = 0.1 \\
+			granica prawostronna 1.28
+		\end{itemize}
+		
+		Dla testu prawostronnego, p-wartość definiujemy jako: 
+		$$p = P(Z \ge Z_{\text{obs}})$$Za pomocą dystrybuanty $F(x)$, która domyślnie mierzy pole od lewej strony, prawdopodobieństwo prawego ogona wyrażamy jako: $$p = 1 - F(Z_{\text{obs}})$$
+		Podstawiając ujemną wartość statystyki testowej do wzoru, otrzymujemy:$$p = 1 - F(-7.04)$$. Wyrażając to za pomocą całki z funkcji gęstości prawdopodobieństwa rozkładu $N(0,1)$:$$p = \int_{-7.04}^{+\infty} \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}} \, dt$$Ponieważ punkt $-7.04$ leży ekstremalnie daleko na lewym ogonie, pole na lewo od niego ($F(-7.04)$) jest bliskie zeru. Wobec tego pole na prawo od niego obejmuje niemal cały wykres rozkładu:$$F(-7.04) \approx 9.61 \cdot 10^{-13}$$Odejmując tę wartość od jedności, otrzymujemy ostateczny wynik:$$p-value = 1 - 9.61 \cdot 10^{-13} \approx 0.99999999999904$$ \\
+		
+		Interpretacja:
+		Zwiększanie poziomu istotności alpha zwiększa obszar krytyczny dla obserwacji.Wartość p jest bardzo bliska 1. Oznacza to, że prawie z całą pewnością możemy stwierdzić, że nasze $\mu$ nie będzie większe od 1.5. Tym razem odrzucamy hipotezę alterantywną, a zostajemy przy zerowej.
+		
+		\newpage
+		Ostatnią hipoteza alternatywną, którą bedziemy analizować jest hipoteza [$H_1$: $\mu < 1.5$]. Hipoteza ta stwierdza, że badany parametr jest mniejszy niż wartość okreslona w hipotezie zerowej. Obszar krytyczny znajduje się tylko w lewym ogonie rozkładu. Odrzucamy $H_0$ jeśli wartość statystyki tesotwej jest ekstremalnie mała.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_7.png} 
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_8.png} 
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{Figure_9.png} 
+		\end{figure}
+		
+		W tym przypadku rozpatrujemy jedynie granice lewostronną. Kolejno dla poziomu istotności:
+		\begin{itemize}
+ 			\item  $\alpha$ = 0.01 \\
+			granica lewostronna -2.32
+			\item $\alpha$ = 0.05 \\
+			granica lewostronna -1.64
+			\item $\alpha$ = 0.1 \\
+			granica lewostronna -1.28
+		\end{itemize}
+		
+		Dla testu lewostronnego, $p$-wartość definiujemy jako:$$p = P(Z \le Z_{\text{obs}})$$Za pomocą dystrybuanty $F(x)$, która domyślnie mierzy pole pod wykresem od skrajnej lewej strony aż do zadanego punktu, prawdopodobieństwo lewego ogona wyrażamy bezpośrednio jako:$$p\text{-wartość} = F(Z_{\text{obs}})$$Podstawiając ujemną wartość statystyki testowej do wzoru, otrzymujemy:$$p = F(-7.04)$$Wyrażając to za pomocą całki z funkcji gęstości prawdopodobieństwa rozkładu $N(0,1)$:$$p = \int_{-\infty}^{-7.04} \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}} \, dt$$Ponieważ punkt $-7.04$ leży ekstremalnie daleko na lewym ogonie, pole na lewo od niego (czyli dokładnie nasza dystrybuanta $F(-7.04)$) obejmuje jedynie mikroskopijny skrawek początku wykresu:$$F(-7.04) \approx 9.61 \cdot 10^{-13}$$W tym przypadku nie odejmujemy wartości od jedności, ponieważ interesuje nas wyłącznie obszar lewostronny. Otrzymujemy ostateczny wynik:$$p\text{-value} = 9.61 \cdot 10^{-13} \approx 0.00000000000096$$ \\
+		
+		Interpretacja:
+		Wartość p jest bardzo bliska 0. Oznacza to, że prawie z całą pewnością możemy stwierdzić, że nasze $\mu$ będzie mniejsze od 1.5. Tym razem odrzucamy hipotezę zerową, a zostajemy przy alternatywnej. Możemy też zauważyć, że rozkład ten jest symetryczny do rozkładu prawostronnego, jeśli chodzi o obszary krytyczne. \\
+		
+		Wnioski ogólne: Zwiększanie poziomu istotności, będące równoznaczne ze zmniejszaniem poziomu ufności, poszerza obszar krytyczny i ułatwia odrzucenie hipotezy zerowej. W odwrotnej sytuacji, gdy rośnie poziom ufności a maleje istotność, obszar krytyczny się kurczy, przez co odrzucenie hipotezy zerowej wymaga znacznie silniejszych dowodów. Nasze obliczenia są prawidłowe, ponieważ średnia empiryczna wyszła około 1.45, co potwierdziły nam nasze testy p-value.
+		
+		\section{Wyznaczanie błedów testowych dla testowania średniej}
+		\textbf{Błąd I rodzaju} \\
+		Błąd I rodzaju jest prawdopodobieństwem odrzucenia hipotezy zerowej, gdy jest ona prawdziwa. Jego teoretyczna wartość jest równa poziomowi istotności $\alpha$.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=1\textwidth]{boxploty.png} 
+		\end{figure}
+		
+	Wykres pudełkowy przedstawia porównanie empirycznych wartości błędu I rodzaju z ich wartościami teoretycznymi dla trzech poziomów istotności ($\alpha = 0.01; 0.05; 0.10$). Badanie przeprowadzone dla stu niezależnych powtórzeń pozwala ocenić poprawność i stabilność testu w zależności od wybranego poziomu istotności oraz rodzaju hipotezy alternatywnej. \\
+	
+	Wykres podzielono na trzy panele odpowiadające kolejnym wartościom $\alpha$, z których każdy zawiera trzy boxploty obrazujące rozkłady wyników. Główna część wykresu, czyli pudełko, wyznacza rozstęp międzykwartylowy skupiający połowę uzyskanych wartości empirycznych. Przebiegająca przez środek pomarańczowa linia to mediana, wyznaczająca punkt, wokół którego oscylowały wyniki symulacji. Pionowe wąsy pokazują zakres większości pozostałych rezultatów, pojedyncze punkty poza nimi to rzadkie wartości odstające, natomiast poziome, różowe linie odzwierciedlają idealne wartości teoretyczne. \\
+	
+	Z analizy wykresów płyną istotne wnioski statystyczne. Przede wszystkim empiryczne mediany we wszystkich dziewięciu przypadkach niemal idealnie pokrywają się z liniami teoretycznymi, co dowodzi, że algorytm testujący działa prawidłowo i ściśle zachowuje zadany reżim istotności. Ponadto zbliżona, wąska szerokość pudełek i wąsów niezależnie od kierunku hipotezy alternatywnej świadczy o wysokiej stabilności numerycznej procedury. Delikatny wzrost rozrzutu wyników wraz ze wzrostem $\alpha$ jest naturalną konsekwencją szerszych obszarów krytycznych. Podsumowując, eksperyment potwierdza, że rzeczywiste prawdopodobieństwo popełnienia błędu I rodzaju odpowiada założonemu poziomowi istotności $\alpha$, co czyni test w pełni wiarygodnym narzędziem. \\
+		\newpage
+		\textbf{Błąd II rodzaju} \\
+		Błąd II rodzaju jest prawdopodobieństwem nieodrzucenia fałszywej hipotezy zerowej. Jego wartość zależy między innymi od odległości parametru rzeczywistego od wartości określonej w hipotezie zerowej. \\
+		
+		\begin{table}[htbp]
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				$\mu$ & błąd II rodzaju \\ \hline
+				\multicolumn{2}{|c|}{\textbf{Test dwustronny}} \\ \hline
+				1,47 & 0,001 \\ \hline
+				1,48 & 0,110 \\ \hline
+				1,49 & 0,638 \\ \hline
+				1,51 & 0,649 \\ \hline
+				1,52 & 0,092 \\ \hline
+				1,53 & 0,002 \\ \hline
+				\multicolumn{2}{|c|}{\textbf{Test lewostronny}} \\ \hline
+				1,47 & 0,000 \\ \hline
+				1,48 & 0,065 \\ \hline
+				1,49 & 0,565 \\ \hline
+				\multicolumn{2}{|c|}{\textbf{Test prawostronny}} \\ \hline
+				1,51 & 0,549 \\ \hline
+				1,52 & 0,063 \\ \hline
+				1,53 & 0,001 \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		Interpretacja: We wszystkich trzech testach widać wyraźną prawidłowość – im wartość rzeczywista $\mu$ leży bliżej wartości określonej w hipotezie zerowej ($1.5$), tym prawdopodobieństwo popełnienia błędu II rodzaju jest większe. Dla wartości najbardziej oddalonych, takich jak $1.47$ czy $1.53$, błąd ten spada niemal do zera ($0.000$ lub $0.001$), co oznacza, że test niemal za każdym razem prawidłowo odrzuca fałszywą hipotezę zerową. Z kolei dla wartości leżących bardzo blisko ($1.49$ oraz $1.51$) ryzyko niewykrycia różnicy gwałtownie rośnie, osiągając najwyższe wartości (odpowiednio $0.638$ i $0.649$ dla testu dwustronnego). \\
+		
+		Analiza wyników dla tych samych wartości parametru $\mu$ pokazuje, że testy jednostronne charakteryzują się mniejszym błędem II rodzaju niż test dwustronny. Przykładowo, dla $\mu = 1.49$ błąd w teście dwustronnym wynosi $0.638$, podczas gdy w teście lewostronnym spada do $0.565$. Podobnie dla $\mu = 1.51$ test prawostronny daje błąd $0.549$ w porównaniu do $0.649$ w teście dwustronnym. Wynika to z faktu, że w testach jednostronnych cała strefa odrzucenia skupiona jest po jednej stronie, przez co test jest bardziej czuły na zmiany zachodzące w tym konkretnym kierunku i rzadziej popełnia błąd polegający na przyjęciu nieprawdziwej hipotezy zerowej. \\
+		
+		\textbf{Moc testu} \\
+		Moc testu jest prawdopodobieństwem poprawnego odrzucenia fałszywej hipotezy zerowej i przyjęcia prawdziwej hipotezy alternatywnej. Oblicza się ją ze wzoru: $$\text{Moc testu} = 1 - \beta, $$ gdzie $\beta$ oznacza błąd II rodzaju. Moc testu obliczona dla każdej wartości jest przedstawiona w tabelce ponizej.
+		\newpage
+		\begin{table}[htbp]
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				\multicolumn{3}{|c|}{\textbf{Test dwustronny}} \\ \hline
+				$\mu$ & błąd II rodzaju & Moc testu \\ \hline
+				1,47 & 0,001 & 0,999 \\ \hline
+				1,48 & 0,110 & 0,890 \\ \hline
+				1,49 & 0,638 & 0,362 \\ \hline
+				1,51 & 0,649 & 0,351 \\ \hline
+				1,52 & 0,092 & 0,908 \\ \hline
+				1,53 & 0,002 & 0,998 \\ \hline
+				\multicolumn{3}{|c|}{\textbf{Test lewostronny}} \\ \hline
+				1,47 & 0,000 & 1,000 \\ \hline
+				1,48 & 0,065 & 0,935 \\ \hline
+				1,49 & 0,565 & 0,435 \\ \hline
+				\multicolumn{3}{|c|}{\textbf{Test prawostronny}} \\ \hline
+				1,51 & 0,549 & 0,451 \\ \hline
+				1,52 & 0,063 & 0,937 \\ \hline
+				1,53 & 0,001 & 0,999 \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		Interpretacja: Zdolność testu do wykrycia fałszywości hipotezy zerowej drastycznie rośnie, gdy rzeczywista średnia oddala się od wartości hipotetycznej. Dla punktów skrajnych, takich jak $1.47$ i $1.53$, moc testu osiąga niemal maksymalną wartość równą $1$ (lub $0.999$), co oznacza, że przy próbie wielkości $n = 1000$ test jest perfekcyjnie czuły i wykryje nawet tak małe przesunięcia średniej. Największą trudność test ma z identyfikacją wartości położonych najbliżej centrum ($1.49$ i $1.51$), wykazując niską skuteczność detekcji. Porównując wyniki dla tych samych punktów (np. dla $\mu = 1.49$ oraz $\mu = 1.51$), można zauważyć przewagę testów jednostronnych nad testem dwustronnym. Dla $\mu = 1.49$ test dwustronny ma moc wynoszącą tylko $0.362$, podczas gdy dedykowany test lewostronny osiąga moc $0.435$. Z kolei dla $\mu = 1.51$ test prawostronny wykazuje moc $0.451$ w porównaniu do $0.351$ dla testu dwustronnego.
+
 	\section{Testowanie hipotezy dotyczącej wariancji}	
 	\subsection{Testowanie hipotezy dotyczącej wariancji dla $\alpha =0.05$}	
 		Wykorzystano udostępnione dane i przeprowadzono testowanie hipotezy zerowej $H_0:\sigma^2=1.5$ przeciwko trzem hipotezom alternatywnym: $H_1:\sigma^2\neq1.5$, $H_1:\sigma^2>1.5$, $H_1:\sigma^2<1.5$ dla poziomu istotności $\alpha =0.05$. Dla rozkładu normalnego, do testów wariancji użyto statystyki chi-kwadrat.\\
@@ -307,6 +508,8 @@
 			\end{tabular}
 		\end{table}
 	Analiza wskazuje, że przy niewielkich różnicach między wariancją rzeczywistą a założoną, testy statystyczne często zawodzą, nie odrzucając fałszywej hipotezy zerowej. Jeśli rzeczywista wariancja tylko nieznacznie różni się od założonej, test często nie odrzuca hipotezy zerowej. Skuteczność zauważenia błędu rośnie gdy ta różnica robi się coraz większa.
-	
+	\section{Wnioski}
+	Parametr alfa ma wpływ na obszary krytyczne.
+	Symulacje potwierdziły teoretyczną poprawność testów statystycznych. Empiryczny błąd I rodzaju jest zgodny z założonym poziomem $\alpha$. Moc testu rośnie wraz z odległością między parametrem rzeczywistym a z hipotezy. 
 
 \end{document}

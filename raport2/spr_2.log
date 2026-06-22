@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.28)  22 JUN 2026 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.28)  22 JUN 2026 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -668,22 +668,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
@@ -692,214 +677,373 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--66
 [1
 
 {c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/
-texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 70--72
-
- []
-
-<c1.png, id=19, 475.27562pt x 353.32pt>
-File: c1.png Graphic file (type png)
-<use c1.png>
-Package pdftex.def Info: c1.png  used on input line 81.
-(pdftex.def)             Requested size: 290.22107pt x 215.7567pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--83
-
- []
-
-<c2.png, id=21, 475.7775pt x 355.3275pt>
-File: c2.png Graphic file (type png)
-<use c2.png>
-Package pdftex.def Info: c2.png  used on input line 87.
-(pdftex.def)             Requested size: 290.22107pt x 216.75487pt.
-<c3.png, id=22, 477.785pt x 353.32pt>
-File: c3.png Graphic file (type png)
-<use c3.png>
-Package pdftex.def Info: c3.png  used on input line 93.
-(pdftex.def)             Requested size: 290.22107pt x 214.61377pt.
-
-
-[2 <./c1.png> <./c2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 117--120
+texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2025/texmf-dist
+/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--123
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
+<Figure_1.png, id=16, 1110.0672pt x 544.9158pt>
+File: Figure_1.png Graphic file (type png)
+<use Figure_1.png>
+Package pdftex.def Info: Figure_1.png  used on input line 63.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_2.png, id=18, 1110.0672pt x 544.9158pt>
+File: Figure_2.png Graphic file (type png)
+<use Figure_2.png>
+Package pdftex.def Info: Figure_2.png  used on input line 67.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_3.png, id=19, 1110.0672pt x 544.9158pt>
+File: Figure_3.png Graphic file (type png)
+<use Figure_3.png>
+Package pdftex.def Info: Figure_3.png  used on input line 71.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
 
 
-[3 <./c3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
+[2 <./Figure_1.png>]
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--143
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
-
- []
-
-<v1.png, id=32, 473.77pt x 350.30875pt>
-File: v1.png Graphic file (type png)
-<use v1.png>
-Package pdftex.def Info: v1.png  used on input line 158.
-(pdftex.def)             Requested size: 290.22107pt x 214.59671pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 155--160
+[3 <./Figure_2.png> <./Figure_3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
 
 [4]
-<v2.png, id=36, 476.78125pt x 355.82938pt>
-File: v2.png Graphic file (type png)
-<use v2.png>
-Package pdftex.def Info: v2.png  used on input line 164.
-(pdftex.def)             Requested size: 290.22107pt x 216.60493pt.
-<v3.png, id=37, 477.785pt x 353.32pt>
-File: v3.png Graphic file (type png)
-<use v3.png>
-Package pdftex.def Info: v3.png  used on input line 170.
-(pdftex.def)             Requested size: 290.22107pt x 214.61377pt.
+<Figure_4.png, id=38, 1110.0672pt x 544.9158pt>
+File: Figure_4.png Graphic file (type png)
+<use Figure_4.png>
+Package pdftex.def Info: Figure_4.png  used on input line 94.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_5.png, id=39, 1110.0672pt x 544.9158pt>
+File: Figure_5.png Graphic file (type png)
+<use Figure_5.png>
+Package pdftex.def Info: Figure_5.png  used on input line 98.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_6.png, id=40, 1110.0672pt x 544.9158pt>
+File: Figure_6.png Graphic file (type png)
+<use Figure_6.png>
+Package pdftex.def Info: Figure_6.png  used on input line 102.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
 
 
-[5 <./v1.png> <./v2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 189--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
+[5 <./Figure_4.png> <./Figure_5.png> <./Figure_6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
 
 
-[6 <./v3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+[6]
+<Figure_7.png, id=50, 1110.0672pt x 544.9158pt>
+File: Figure_7.png Graphic file (type png)
+<use Figure_7.png>
+Package pdftex.def Info: Figure_7.png  used on input line 126.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_8.png, id=51, 1110.0672pt x 544.9158pt>
+File: Figure_8.png Graphic file (type png)
+<use Figure_8.png>
+Package pdftex.def Info: Figure_8.png  used on input line 130.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+<Figure_9.png, id=52, 1110.0672pt x 544.9158pt>
+File: Figure_9.png Graphic file (type png)
+<use Figure_9.png>
+Package pdftex.def Info: Figure_9.png  used on input line 134.
+(pdftex.def)             Requested size: 386.95897pt x 189.9501pt.
+
+
+[7 <./Figure_7.png> <./Figure_8.png> <./Figure_9.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--211
+Underfull \hbox (badness 10000) in paragraph at lines 149--151
+
+ []
+
+<boxploty.png, id=60, 1084.05pt x 433.62pt>
+File: boxploty.png Graphic file (type png)
+<use boxploty.png>
+Package pdftex.def Info: boxploty.png  used on input line 160.
+(pdftex.def)             Requested size: 483.69687pt x 193.47969pt.
+
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--217
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--223
-
- []
-
-<b1.png, id=47, 477.785pt x 359.3425pt>
-File: b1.png Graphic file (type png)
-<use b1.png>
-Package pdftex.def Info: b1.png  used on input line 232.
-(pdftex.def)             Requested size: 290.22107pt x 218.27194pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--234
-
- []
-
-
-
-[7]
-<b2.png, id=52, 477.785pt x 359.3425pt>
-File: b2.png Graphic file (type png)
-<use b2.png>
-Package pdftex.def Info: b2.png  used on input line 238.
-(pdftex.def)             Requested size: 290.22107pt x 218.27194pt.
-<b3.png, id=53, 477.785pt x 359.3425pt>
-File: b3.png Graphic file (type png)
-<use b3.png>
-Package pdftex.def Info: b3.png  used on input line 244.
-(pdftex.def)             Requested size: 290.22107pt x 218.27194pt.
-
-
-[8 <./b1.png> <./b2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 263--266
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 267--269
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
 
 
-[9 <./b3.png>]
-<pudelko1.png, id=60, 1078.0275pt x 374.39874pt>
-File: pudelko1.png Graphic file (type png)
-<use pudelko1.png>
-Package pdftex.def Info: pudelko1.png  used on input line 286.
-(pdftex.def)             Requested size: 483.69687pt x 167.98657pt.
+[9 <./boxploty.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 169--171
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+
+ []
+
 
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
-[11 <./pudelko1.png>] (./spr_2.aux)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+
+ []
+
+
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 259--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
+
+ []
+
+<c1.png, id=76, 475.27562pt x 353.32pt>
+File: c1.png Graphic file (type png)
+<use c1.png>
+Package pdftex.def Info: c1.png  used on input line 282.
+(pdftex.def)             Requested size: 290.22107pt x 215.7567pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--284
+
+ []
+
+<c2.png, id=77, 475.7775pt x 355.3275pt>
+File: c2.png Graphic file (type png)
+<use c2.png>
+Package pdftex.def Info: c2.png  used on input line 288.
+(pdftex.def)             Requested size: 290.22107pt x 216.75487pt.
+
+
+[12 <./c1.png>]
+<c3.png, id=82, 477.785pt x 353.32pt>
+File: c3.png Graphic file (type png)
+<use c3.png>
+Package pdftex.def Info: c3.png  used on input line 294.
+(pdftex.def)             Requested size: 290.22107pt x 214.61377pt.
+
+
+[13 <./c2.png> <./c3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 318--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--338
+
+ []
+
+
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 342--344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
+
+ []
+
+<v1.png, id=92, 473.77pt x 350.30875pt>
+File: v1.png Graphic file (type png)
+<use v1.png>
+Package pdftex.def Info: v1.png  used on input line 359.
+(pdftex.def)             Requested size: 290.22107pt x 214.59671pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--361
+
+ []
+
+<v2.png, id=93, 476.78125pt x 355.82938pt>
+File: v2.png Graphic file (type png)
+<use v2.png>
+Package pdftex.def Info: v2.png  used on input line 365.
+(pdftex.def)             Requested size: 290.22107pt x 216.60493pt.
+
+
+[15 <./v1.png>]
+<v3.png, id=98, 477.785pt x 353.32pt>
+File: v3.png Graphic file (type png)
+<use v3.png>
+Package pdftex.def Info: v3.png  used on input line 371.
+(pdftex.def)             Requested size: 290.22107pt x 214.61377pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--393
+
+ []
+
+
+
+[16 <./v2.png> <./v3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 394--396
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--412
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--424
+
+ []
+
+
+
+[17]
+<b1.png, id=107, 477.785pt x 359.3425pt>
+File: b1.png Graphic file (type png)
+<use b1.png>
+Package pdftex.def Info: b1.png  used on input line 433.
+(pdftex.def)             Requested size: 290.22107pt x 218.27194pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--435
+
+ []
+
+<b2.png, id=108, 477.785pt x 359.3425pt>
+File: b2.png Graphic file (type png)
+<use b2.png>
+Package pdftex.def Info: b2.png  used on input line 439.
+(pdftex.def)             Requested size: 290.22107pt x 218.27194pt.
+<b3.png, id=109, 477.785pt x 359.3425pt>
+File: b3.png Graphic file (type png)
+<use b3.png>
+Package pdftex.def Info: b3.png  used on input line 445.
+(pdftex.def)             Requested size: 290.22107pt x 218.27194pt.
+
+
+[18 <./b1.png> <./b2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 464--467
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--470
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--473
+
+ []
+
+
+
+[19 <./b3.png>]
+<pudelko1.png, id=117, 1078.0275pt x 374.39874pt>
+File: pudelko1.png Graphic file (type png)
+<use pudelko1.png>
+Package pdftex.def Info: pudelko1.png  used on input line 487.
+(pdftex.def)             Requested size: 483.69687pt x 167.98657pt.
+
+
+[20]
+
+[21 <./pudelko1.png>]
+
+[22] (./spr_2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7259 strings out of 473189
- 120940 string characters out of 5719958
- 524695 words of memory out of 5000000
- 30453 multiletter control sequences out of 15000+600000
- 570539 words of font info for 62 fonts, out of 8000000 for 9000
+ 7345 strings out of 473189
+ 122504 string characters out of 5719958
+ 526695 words of memory out of 5000000
+ 30536 multiletter control sequences out of 15000+600000
+ 571652 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,11n,77p,1198b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.p
-fb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/tex
-live/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2025/
-texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2025/texmf-dist
-/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2025/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm1728.pfb>
-Output written on spr_2.pdf (11 pages, 626258 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texl
+ive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2025/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2025/texmf-dist/
+fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2025/texmf-dist/fonts/type
+1/public/cm-super/sfbx2488.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/c
+m-super/sfrm0800.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sf
+rm1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb
+><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
+Output written on spr_2.pdf (22 pages, 1168020 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 203 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
