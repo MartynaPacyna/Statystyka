@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.10)  22 JUN 2026 13:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.10)  22 JUN 2026 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -786,8 +786,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.138 			\item  $
-                 \alpha$ = 0.01 \\
+l.138  			\item  $
+                  \alpha$ = 0.01 \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -796,41 +796,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
-[7] (spr_2.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--150
+
+ []
+
+<boxploty.png, id=55, 722.7pt x 433.62pt>
+File: boxploty.png Graphic file (type png)
+<use boxploty.png>
+Package pdftex.def Info: boxploty.png  used on input line 159.
+(pdftex.def)             Requested size: 483.69687pt x 290.21953pt.
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+ []
+
+[8 <./boxploty.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
+ []
+
+[9] [10] (spr_2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5847 strings out of 467871
- 95955 string characters out of 5417408
- 507761 words of memory out of 5000000
- 34670 multiletter control sequences out of 15000+600000
- 637621 words of font info for 61 fonts, out of 8000000 for 9000
+ 5860 strings out of 467871
+ 96221 string characters out of 5417408
+ 510763 words of memory out of 5000000
+ 34682 multiletter control sequences out of 15000+600000
+ 638397 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,1054b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,9n,65p,1054b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
-rm0800.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\tcrm1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecrm1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\Martyna\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Martyna\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk><C:/Users/Martyna/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/
-Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmmi6.pfb><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmr12.pfb><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Martyna/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Martyna/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Martyna/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on spr_2.pdf (7 pages, 601155 bytes).
+bx1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecrm0800.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\tcrm1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Martyna\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Martyna\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\Martyna\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Martyna\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk><C:/Users/Mar
+tyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
+:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi6.pfb><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb><C:/Users/Martyna/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Martyna/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Martyna/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Martyna/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/M
+artyna/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on spr_2.pdf (10 pages, 647550 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
+ 310 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

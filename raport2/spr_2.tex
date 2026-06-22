@@ -120,7 +120,7 @@
 		
 		\newpage
 		Ostatnią hipoteza alternatywną, którą bedziemy analizować jest hipoteza [$H_1$: $\mu < 1.5$]. Hipoteza ta stwierdza, że badany parametr jest mniejszy niż wartość okreslona w hipotezie zerowej. Obszar krytyczny znajduje się tylko w lewym ogonie rozkładu. Odrzucamy $H_0$ jeśli wartość statystyki tesotwej jest ekstremalnie mała.
-				\begin{figure}[H]
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.8\textwidth]{Figure_7.png} 
 		\end{figure}
@@ -135,7 +135,7 @@
 		
 		\begin{itemize}
 			W tym przypadku rozpatrujemy jedynie granice lewostronną. Kolejno dla poziomu istotności:
-			\item  $\alpha$ = 0.01 \\
+ 			\item  $\alpha$ = 0.01 \\
 			granica lewostronna -2.32
 			\item $\alpha$ = 0.05 \\
 			granica lewostronna -1.64
@@ -146,5 +146,81 @@
 		Dla testu lewostronnego, $p$-wartość definiujemy jako:$$p = P(Z \le Z_{\text{obs}})$$Za pomocą dystrybuanty $F(x)$, która domyślnie mierzy pole pod wykresem od skrajnej lewej strony aż do zadanego punktu, prawdopodobieństwo lewego ogona wyrażamy bezpośrednio jako:$$p\text{-wartość} = F(Z_{\text{obs}})$$Podstawiając ujemną wartość statystyki testowej do wzoru, otrzymujemy:$$p = F(-7.04)$$Wyrażając to za pomocą całki z funkcji gęstości prawdopodobieństwa rozkładu $N(0,1)$:$$p = \int_{-\infty}^{-7.04} \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}} \, dt$$Ponieważ punkt $-7.04$ leży ekstremalnie daleko na lewym ogonie, pole na lewo od niego (czyli dokładnie nasza dystrybuanta $F(-7.04)$) obejmuje jedynie mikroskopijny skrawek początku wykresu:$$F(-7.04) \approx 9.61 \cdot 10^{-13}$$W tym przypadku nie odejmujemy wartości od jedności, ponieważ interesuje nas wyłącznie obszar lewostronny. Otrzymujemy ostateczny wynik:$$p\text{-value} = 9.61 \cdot 10^{-13} \approx 0.00000000000096$$ \\
 		
 		Interpretacja:
-		Wartość p jest bardzo bliska 0. Oznacza to, że prawie z całą pewnością możemy stwierdzić, że nasze $\mu$ będzie mniejsze od 1.5. Tym razem odrzucamy hipotezę zerową, a zostajemy przy alternatywnej. Możemy też zauważyć, że rozkład ten jest symetryczny do rozkładu prawostronnego, jeśli chodzi o obszary krytyczne. 
+		Wartość p jest bardzo bliska 0. Oznacza to, że prawie z całą pewnością możemy stwierdzić, że nasze $\mu$ będzie mniejsze od 1.5. Tym razem odrzucamy hipotezę zerową, a zostajemy przy alternatywnej. Możemy też zauważyć, że rozkład ten jest symetryczny do rozkładu prawostronnego, jeśli chodzi o obszary krytyczne. \\
+		
+		Wnioski ogólne: Zwiększanie poziomu istotności, będące równoznaczne ze zmniejszaniem poziomu ufności, poszerza obszar krytyczny i ułatwia odrzucenie hipotezy zerowej. W odwrotnej sytuacji, gdy rośnie poziom ufności a maleje istotność, obszar krytyczny się kurczy, przez co odrzucenie hipotezy zerowej wymaga znacznie silniejszych dowodów. Nasze obliczenia są prawidłowe, ponieważ średnia empiryczna wyszła około 1.45, co potwierdziły nam nasze testy p-value.
+		
+		\section{Wyznaczanie błedów testowych dla testowania średniej}
+		\textbf{Błąd I rodzaju} \\
+		Błąd I rodzaju jest prawdopodobieństwem odrzucenia hipotezy zerowej, gdy jest ona prawdziwa. Jego teoretyczna wartość jest równa poziomowi istotności $\alpha$.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=1\textwidth]{boxploty.png} 
+		\end{figure}
+		
+		Wykres pudełkowy przedstawia porównanie empirycznych, czyli uzyskanych w drodze symulacji komputerowej, wartości błędu I rodzaju z ich wartościami teoretycznymi dla trzech różnych poziomów istotności. Każde z trzech pionowych pudełek reprezentuje rozkład stu otrzymanych wyników symulacji, co pozwala ocenić stabilność i poprawność skonstruowanego testu statystycznego. 
+		
+		Główna, prostokątna część każdego wykresu, zwana pudełkiem, obejmuje tak zwany rozstęp międzykwartylowy, w którym skupia się dokładnie połowa wszystkich uzyskanych z symulacji wartości. Pozioma, pomarańczowa kreska przebiegająca przez środek tego pudełka to mediana, która wyznacza wartość środkową całego zbioru danych i pokazuje, wokół jakiego punktu najczęściej oscylowały wyniki symulacji. Pionowe linie wychodzące w górę i w dół z pudełka, nazywane wąsami, wyznaczają zasięg typowych rezultatów i pokazują zakres, w jakim mieści się większość pozostałych wyników. Pojedyncze kółka widoczne na samych końcach, znajdujące się poza zasięgiem wąsów, to wartości odstające, które reprezentują rzadkie, skrajne przypadki losowe powstałe w wyniku naturalnej zmienności generatora liczb. Poziome, czerwone linie przerywane ciągnące się przez całą szerokość wykresu pokazują idealne wartości teoretyczne, z którymi porównujemy nasze symulacje.
+		
+		Z wykresu jasno wynika, że mediany niemal idealnie pokrywają się z czerwonymi liniami przerywanymi, co stanowi ostateczny dowód na to, że test został zaprogramowany prawidłowo. Ponieważ wyniki symulacji komputerowej tak precyzyjnie skupiają się wokół założeń teoretycznych, wykres ten potwierdza, że rzeczywiste prawdopodobieństwo popełnienia błędu I rodzaju w naszym teście jest dokładnie równe założonemu poziomowi istotności alfa. \\
+		\newpage
+		\textbf{Błąd II rodzaju} \\
+		Błąd II rodzaju jest prawdopodobieństwem nieodrzucenia fałszywej hipotezy zerowej. Jego wartość zależy między innymi od odległości parametru rzeczywistego od wartości określonej w hipotezie zerowej. \\
+		
+		\begin{table}[htbp]
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				$\mu$ & błąd II rodzaju \\ \hline
+				\multicolumn{2}{|c|}{\textbf{Test dwustronny}} \\ \hline
+				1,47 & 0,001 \\ \hline
+				1,48 & 0,110 \\ \hline
+				1,49 & 0,638 \\ \hline
+				1,51 & 0,649 \\ \hline
+				1,52 & 0,092 \\ \hline
+				1,53 & 0,002 \\ \hline
+				\multicolumn{2}{|c|}{\textbf{Test lewostronny}} \\ \hline
+				1,47 & 0,000 \\ \hline
+				1,48 & 0,065 \\ \hline
+				1,49 & 0,565 \\ \hline
+				\multicolumn{2}{|c|}{\textbf{Test prawostronny}} \\ \hline
+				1,51 & 0,549 \\ \hline
+				1,52 & 0,063 \\ \hline
+				1,53 & 0,001 \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		Interpretacja: We wszystkich trzech testach widać wyraźną prawidłowość – im wartość rzeczywista $\mu$ leży bliżej wartości określonej w hipotezie zerowej ($1.5$), tym prawdopodobieństwo popełnienia błędu II rodzaju jest większe. Dla wartości najbardziej oddalonych, takich jak $1.47$ czy $1.53$, błąd ten spada niemal do zera ($0.000$ lub $0.001$), co oznacza, że test niemal za każdym razem prawidłowo odrzuca fałszywą hipotezę zerową. Z kolei dla wartości leżących bardzo blisko ($1.49$ oraz $1.51$) ryzyko niewykrycia różnicy gwałtownie rośnie, osiągając najwyższe wartości (odpowiednio $0.638$ i $0.649$ dla testu dwustronnego). \\
+		
+		Analiza wyników dla tych samych wartości parametru $\mu$ pokazuje, że testy jednostronne charakteryzują się mniejszym błędem II rodzaju niż test dwustronny. Przykładowo, dla $\mu = 1.49$ błąd w teście dwustronnym wynosi $0.638$, podczas gdy w teście lewostronnym spada do $0.565$. Podobnie dla $\mu = 1.51$ test prawostronny daje błąd $0.549$ w porównaniu do $0.649$ w teście dwustronnym. Wynika to z faktu, że w testach jednostronnych cała strefa odrzucenia skupiona jest po jednej stronie, przez co test jest bardziej czuły na zmiany zachodzące w tym konkretnym kierunku i rzadziej popełnia błąd polegający na przyjęciu nieprawdziwej hipotezy zerowej. \\
+		
+		\textbf{Moc testu} \\
+		Moc testu jest prawdopodobieństwem poprawnego odrzucenia fałszywej hipotezy zerowej i przyjęcia prawdziwej hipotezy alternatywnej. Oblicza się ją ze wzoru: $$\text{Moc testu} = 1 - \beta, $$ gdzie $\beta$ oznacza błąd II rodzaju. Moc testu obliczona dla każdej wartości jest przedstawiona w tabelce ponizej.
+		\newpage
+		\begin{table}[htbp]
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				\multicolumn{3}{|c|}{\textbf{Test dwustronny}} \\ \hline
+				$\mu$ & błąd II rodzaju & Moc testu \\ \hline
+				1,47 & 0,001 & 0,999 \\ \hline
+				1,48 & 0,110 & 0,890 \\ \hline
+				1,49 & 0,638 & 0,362 \\ \hline
+				1,51 & 0,649 & 0,351 \\ \hline
+				1,52 & 0,092 & 0,908 \\ \hline
+				1,53 & 0,002 & 0,998 \\ \hline
+				\multicolumn{3}{|c|}{\textbf{Test lewostronny}} \\ \hline
+				1,47 & 0,000 & 1,000 \\ \hline
+				1,48 & 0,065 & 0,935 \\ \hline
+				1,49 & 0,565 & 0,435 \\ \hline
+				\multicolumn{3}{|c|}{\textbf{Test prawostronny}} \\ \hline
+				1,51 & 0,549 & 0,451 \\ \hline
+				1,52 & 0,063 & 0,937 \\ \hline
+				1,53 & 0,001 & 0,999 \\ \hline
+			\end{tabular}
+		\end{table}
+		
+		Interpretacja: Zdolność testu do wykrycia fałszywości hipotezy zerowej drastycznie rośnie, gdy rzeczywista średnia oddala się od wartości hipotetycznej. Dla punktów skrajnych, takich jak $1.47$ i $1.53$, moc testu osiąga niemal maksymalną wartość równą $1$ (lub $0.999$), co oznacza, że przy próbie wielkości $n = 1000$ test jest perfekcyjnie czuły i wykryje nawet tak małe przesunięcia średniej. Największą trudność test ma z identyfikacją wartości położonych najbliżej centrum ($1.49$ i $1.51$), wykazując niską skuteczność detekcji. Porównując wyniki dla tych samych punktów (np. dla $\mu = 1.49$ oraz $\mu = 1.51$), można zauważyć przewagę testów jednostronnych nad testem dwustronnym. Dla $\mu = 1.49$ test dwustronny ma moc wynoszącą tylko $0.362$, podczas gdy dedykowany test lewostronny osiąga moc $0.435$. Z kolei dla $\mu = 1.51$ test prawostronny wykazuje moc $0.451$ w porównaniu do $0.351$ dla testu dwustronnego.
+		
 \end{document}
